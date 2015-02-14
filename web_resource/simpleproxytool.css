@@ -1,0 +1,16 @@
+﻿.data {
+    font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+    font-weight: bold;
+}
+
+.regular {
+    font-size: 85%;
+}
+
+.large {
+    font-size: 105%;
+}
+
+#weburl {
+    width: 800px;
+}

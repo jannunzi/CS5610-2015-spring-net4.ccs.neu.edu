@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: showfile.htm
+    ... main page for the Show File utility
+    
+    Copyright 2012,
+    Richard Rasala,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    rasala@ccs.neu.edu
+    
+    January 13, 2012
+-->
+
+<!--
+    Query string conventions for showfile.htm:
+    
+    The path to the file to show must be a relative path
+    to a text file in the same web domain as this utility.
+    
+    The text file should be a public file, that is, a file
+    that the server is willing to serve.
+    
+    The path may be given as an unnamed parameter in the
+    query or as a query parameter of the form: url=path.
+    
+    Two optional parameters will permit you to show only
+    some lines in the text file.
+    
+        start: the line index in the text file to start
+        stop:  the line index in the text file to stop
+    
+    By end user conventions, the first line has index 1.
+    
+    If only one of start and stop is provided, then the
+    utility will provide the lines that make sense.
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+        content="initial-scale=1, minimum-scale=1">
+
+    <title>Show File</title>
+    
+    <style type="text/css">
+    
+        pre {
+            font-size: 120%;
+            font-weight: bold;
+            color: #00f;
+        }
+
+        @media screen {
+            #print-output {
+                padding: 20px;
+            }
+        }
+    
+    </style>
+    
+    <script type="text/javascript"
+        src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+    <script type="text/javascript" src="javascript/print.js"></script>
+    
+    <script type="text/javascript" src="javascript/queryparams.js"></script>
+    
+    <script type="text/javascript">
+
+        var urlMissing = "<p><b>The URL of the file to show"
+            + " was not provided in the query string</b></p>";
+
+        var urlFailure = "<p><b>Data could not be obtained"
+            + " from the URL provided:</b></p>";
+
+        var urlString;
+
+        var start;
+        var stop;
+
+
+        function showFile(data) {
+            if (!start && !stop) {
+                Print.printEncodedInPreTag(data);
+                return;
+            }
+
+            var a = parseInt(start);
+            var b = parseInt(stop);
+
+            Print.printLines(data, a, b);
+        }
+
+
+        function handleError() {
+            Print.print(urlFailure);
+            Print.printEncodedInPreTag(urlString);
+        }
+
+
+        function fetchFile() {
+            QueryParams.Parse();
+
+            urlString = QueryParams.Params["url"]
+                || QueryParams.List[0];
+
+            if (!urlString) {
+                Print.print(urlMissing);
+                return;
+            }
+
+            start = QueryParams.Params["start"];
+            stop = QueryParams.Params["stop"];
+            
+            var settings = {
+                url: urlString,
+                success: showFile,
+                error: handleError,
+                dataType: "text",
+                cache: false
+            };
+
+            $.ajax(settings);
+        }
+
+        $(fetchFile);
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Add Elements On Click</title>
+    <link rel="stylesheet" href="css/jquery-ui.css"/>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <style>
+        .dragme { background-color : beige}
+        .resizeme {
+            background-color : lightgray;
+            overflow: hidden;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#addParagraph").click(function () {
+                addParagraph("New Paragraph", 150,150);
+            })
+        });
+
+        function addParagraph(text, x, y)
+        {
+            var p = $("<p contenteditable='true'>");
+            p
+                .html(text)
+                .draggable({grid:[20,20]})
+                .resizable()
+                .css({
+                    "position": "absolute",
+                    "left": x,
+                    "top": y
+                });
+            $("body").append(p);
+        }
+    </script>
+</head>
+<body>
+    <h1>Add Elements On Click</h1>
+    <button id="addParagraph">Add Paragraph</button>
+</body>
+</html>

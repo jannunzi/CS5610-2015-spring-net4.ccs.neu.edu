@@ -1,0 +1,50 @@
+﻿.normal {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.large {
+    font-size: 140%;
+    font-weight: bold;
+}
+
+.indent {
+    margin-left: 5%;
+}
+
+.monospace {
+    font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+}
+
+.test {
+    font-size: 110%;
+    font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+}
+
+.plain {
+    list-style: none;
+    font-size: 110%;
+    font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+}
+
+.dropdown {
+    width: 700px;
+    font-size: 115%;
+    font-weight: bold;
+    font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+}
+
+.textinput {
+    width: 350px;
+    font-size: 115%;
+    font-weight: bold;
+    font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+}
+
+.button {
+    width: 175px;
+    font-size: 110%;
+    font-weight: bold;
+    font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+}
+

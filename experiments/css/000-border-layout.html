@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Border Layout</title>
+    <style>
+
+        body {
+            padding:0px;
+            margin:0px;
+        }
+
+        ul.no-bullets, ul.no-bullets ul {
+            list-style: none;
+        }
+
+        .no-padding {
+            padding: 0px;
+        }
+
+        .no-margin {
+            margin:0px;
+        }
+
+        ul.padding-left-small ul {
+            padding-left: 20px;
+            white-space: nowrap;
+        }
+
+        ul.horizontal > li {
+            display: inline;
+        }
+
+        ul.horizontal {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #nav-left {
+            height: 300px;
+            width: 100px;
+            float: left;
+        }
+
+        section {
+            width: 350px;
+            float: left;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header-top">
+        <h1 style="margin:0px">City Gallery</h1>
+        <nav>
+            <ul class="horizontal">
+                <li>qwe</li>
+                <li>qwe</li>
+                <li>qwe</li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav id="nav-left">
+        <ul>
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+        </ul>
+        <ul class="no-bullets no-padding no-margin">
+            <li>
+                <a href="#article-1">Article 1</a>
+            </li>
+            <li>
+                <a href="#article-2">Article 2</a>
+            </li>
+            <li>
+                <a href="#article-3">Article 3</a>
+            </li>
+        </ul>
+<ul>
+    <li>Item 1
+        <ul>
+            <li>Item 1.1</li>
+            <li>Item 1.2</li>
+            <li>Item 1.3</li>
+        </ul>
+    </li>
+    <li>Item 2
+        <ul>
+            <li>Item 2.1</li>
+            <li>Item 2.2</li>
+            <li>Item 2.3</li>
+        </ul>
+    </li>
+</ul>
+<ul class="no-bullets no-padding padding-left-small">
+    <li>
+        <details>
+            <summary>
+                Languages
+            </summary>
+            <ul>
+                <li>Java</li>
+                <li>JavaScript</li>
+                <li>C#</li>
+            </ul>
+        </details>
+    </li>
+            <li>
+                <details>
+                    <summary>
+                        Databases
+                    </summary>
+                    <ul>
+                        <li>
+                            <details>
+                                <summary>
+                                    Relational
+                                </summary>
+                                <ul>
+                                    <li>SQL Server</li>
+                                    <li>MySQL</li>
+                                    <li>Oracle</li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>
+                                    No SQL
+                                </summary>
+                                <ul>
+                                    <li>Hadoop</li>
+                                    <li>MongoDB</li>
+                                    <li>Cassandra</li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </details>
+            </li>
+        </ul>
+    </nav>
+
+    <section>
+        <h1>Section 1</h1>
+        <article>
+            <header>
+                <a name="article-1"></a>
+                <h2>Article 1</h2>
+            </header>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+            </p>
+        </article>
+        <article>
+            <header>
+                <a name="article-2"></a>
+                <h2>Article 2</h2>
+            </header>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+            </p>
+        </article>
+        <article>
+            <header>
+                <a name="article-3"></a>
+                <h2>Article 3</h2>
+            </header>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+            </p>
+        </article>
+    </section>
+
+    <footer>
+        Copyright (C) 2015 Northeastern University
+    </footer>
+
+</body>
+</html>

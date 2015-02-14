@@ -1,0 +1,89 @@
+﻿/* Resetting styles inheritted from browser */
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1, h2, h3, h4 {
+    margin: 0px;
+    padding:0px;
+}
+
+.header {
+    color: red;
+}
+
+#north, #south {
+    background-color: beige;
+    width: 600px;
+    clear: both;
+}
+#west, #center, #east {
+    float: left;
+}
+#west, #east {
+    width:100px;
+    background-color: lightblue;
+}
+#center {
+    width: 400px;
+    background-color: lightgreen;
+}
+
+.container {
+    width: 600px;
+    margin: auto;
+}
+
+.row {
+    width: 600px;
+}
+
+.col-1, .col-2, .col-3, .col-4,
+.col-5, .col-6, .col-7, .col-8,
+.col-9, .col-10, .col-11, .col12 {
+    float: left;
+}
+
+.col-1 {
+    width: 50px;
+}
+
+.col-2 {
+    width: 100px;
+}
+
+.col-3 {
+    width: 150px;
+}
+
+.col-4 {
+    width: 200px;
+}
+
+.col-5 {
+    width: 250px;
+}
+
+.col-6 {
+    width: 300px;
+}
+
+.col-7 {
+    width: 350px;
+}
+.col-8 {
+    width: 400px;
+}
+.col-9 {
+    width: 450px;
+}
+.col-10 {
+    width: 500px;
+}
+.col-11 {
+    width: 550px;
+}
+.col-12 {
+    width: 600px;
+}

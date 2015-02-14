@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Add DOM to Local Storage</title>
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $(".add-par").click(function () {
+                addParagraph(200, 200, "Dummy Content");
+            });
+            $(".save").click(save);
+            $(".load").click(load);
+        });
+
+        function load()
+        {
+            var pageStr = localStorage.getItem("page");
+            var page = JSON.parse(pageStr);
+            console.log(page);
+            for(var i in page)
+            {
+                var par = page[i];
+                var html = par.html;
+                var top = par.top;
+                var left = par.left;
+                addParagraph(top, left, html);
+            }
+        }
+
+        function save()
+        {
+            var allPs = $("p");
+            //   console.log(allPs);
+            var ps = [];
+            allPs.each(function (event, elem) {
+                var p = $(elem);
+                var html = p.html();
+                //console.log(html);
+                var pos = p.position();
+                //console.log(pos);
+
+                var obj = {
+                    html: html,
+                    top: pos.top,
+                    left: pos.left
+                };
+
+                ps.push(obj);
+            });
+            var psStr = JSON.stringify(ps);
+            console.log(psStr);
+            localStorage.setItem("page", psStr);
+        }
+        function addParagraph(top, left, content)
+        {
+            console.log("hello2");
+            var par = $("<p contenteditable='true'>");
+            par
+                .css({
+                    position: "absolute",
+                    left: left, top: top
+                })
+                .draggable({ grid: [20, 20] })
+                .resizable({ handles: "n, e, s, w, ne, se, sw, nw" })
+                .html(content)
+                .appendTo("body");
+        }
+    </script>
+</head>
+<body>
+    <h1>Add DOM to Local Storage</h1>
+    <button class="add-par">Add Paragraph</button>
+    <button class="save">Save</button>
+    <button class="load">Load</button>
+</body>
+</html>

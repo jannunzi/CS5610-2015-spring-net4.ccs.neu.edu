@@ -1,0 +1,52 @@
+﻿/*
+    File: blog.css
+        
+    Copyright 2010,
+    Richard Rasala,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    rasala@ccs.neu.edu
+    
+    September 14, 2010
+*/
+
+h1 { font-size:150%; }
+
+h2 { font-size:140%; }
+
+h3 { font-size:130%; }
+
+h4 { font-size:120%; }
+
+h5 { font-size:110%; }
+
+h6 { font-size:100%; }
+
+.item_head {
+    margin:25px 0px 10px 0px;
+}
+
+.item_head_span {
+    font-size:130%;
+    font-weight:bold;
+    padding:5px;
+    border:solid 3px red;
+    margin:2px 0px;
+    background:#d0e0ff;
+}
+
+.item_date_span {
+
+}
+
+.item_time_span {
+    font-style: italic;
+}
+
+.item_body {
+    
+}
+
+.message {
+    font-style:italic;
+}

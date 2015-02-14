@@ -1,0 +1,21 @@
+﻿    File: storysource/story.txt
+    ... for access to the Story Utility source
+
+introduction.htm                            Story Source Introduction
+../showfile.htm?index.htm                   index.htm
+../showfile.htm?showfile.htm                showfile.htm
+../showfile.htm?whatisnext.htm              whatisnext.htm
+../showfile.htm?links.htm                   links.htm
+../showfile.htm?javascript/storycore.js     javascript/storycore.js
+../showfile.htm?javascript/story.js         javascript/story.js
+../showfile.htm?javascript/whatisnext.js    javascript/whatisnext.js
+../showfile.htm?javascript/links.js         javascript/links.js
+../showfile.htm?javascript/print.js         javascript/print.js
+../showfile.htm?javascript/queryparams.js   javascript/queryparams.js
+../showfile.htm?css/story.css               css/story.css
+../showfile.htm?css/links.css               css/links.css
+../showfile.htm?css/slide.css               css/slide.css
+../showfile.htm?css/pptslide.css            css/pptslide.css
+../showfile.htm?css/screen.css              css/screen.css
+../showfile.htm?css/print.css               css/print.css
+story.txt                                   The story file for this story

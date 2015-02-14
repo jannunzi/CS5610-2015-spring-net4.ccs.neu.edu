@@ -1,0 +1,141 @@
+﻿/*
+    File: css/story.css
+    
+    This is the CSS for the Story Utility page.
+    
+    This CSS is essential for the Story Utility
+    to function properly.
+
+    Copyright 2012,
+    Richard Rasala,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    rasala@ccs.neu.edu
+    
+    January 27, 2012
+*/
+
+body {
+    background: white;
+}
+
+img {
+    border: 0px;
+}
+
+p {
+    text-align: justify; 
+}
+
+p, pre {
+    font-size: 125%;
+}
+
+code, pre {
+    color: #00f;
+    font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+    font-weight: bold;
+}
+
+a {
+    color: #08f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #88f;
+}
+
+a:hover {
+    color: #f00;
+}
+
+
+.text {
+    font-family: "Baskerville", "Palatino", "Times New Roman", "Century Schoolbook", serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 120%;
+}
+
+.textbutton {
+    font-size: 100%;
+}
+
+.number {
+    font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.numberbox {
+    width: 2.5em;
+}
+
+
+#slideDropdown {
+    width: 500px;
+    max-width: 70%;
+    font-family: serif;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+#backArrow:hover { cursor: pointer; }
+
+#nextArrow:hover { cursor: pointer; }
+
+
+.wrapper {
+    text-align: center;
+    margin-left: 96px;
+    margin-right: 96px;
+}
+
+
+.relative
+{
+    position: relative;
+}
+
+.flush_L_1
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.flush_R_1
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.flush_L_2
+{
+    position: absolute;
+    top: 0;
+    left: 48px;
+    z-index: 1;
+}
+
+.flush_R_2
+{
+    position: absolute;
+    top: 0;
+    right: 48px;
+    z-index: 1;
+}
+
+
+.red, .error {
+    color: #f00;
+}
+
+.bold {
+    font-weight: bold;
+}

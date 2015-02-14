@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: index.htm
+    ... main page for the Story Utility
+    
+    Copyright 2012,
+    Richard Rasala,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    rasala@ccs.neu.edu
+    
+    January 27, 2012
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+        content="initial-scale=1, minimum-scale=1">
+
+    <title>Story Utility</title>
+
+    <link rel="Stylesheet" type="text/css" href="css/story.css" />
+    
+    <script type="text/javascript"
+        src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+    <script type="text/javascript" src="javascript/print.js"></script>
+    
+    <script type="text/javascript" src="javascript/queryparams.js"></script>
+    
+    <script type="text/javascript" src="javascript/storycore.js"></script>
+    
+    <script type="text/javascript" src="javascript/story.js"></script>
+</head>
+
+<body>
+    <div id="pageHead" class="relative">
+
+    <img id="backArrow"
+         class="flush_L_1"
+         src="images/arrowL.jpg"
+         alt="Previous slide"
+         title="Previous slide" />
+    
+    <img id="nextArrow"
+         class="flush_R_1"
+         src="images/arrowR.jpg"
+         alt="Next slide"
+         title="Next slide" />
+    
+    <span class="flush_L_2">
+    <a id="helpLink" href="storyfiles/introduction.htm" target="_blank">
+    <img src="images/qmark.jpg"
+         alt="Story Utility Documentation"
+         title="Story Utility Documentation" />
+    </a>
+    </span>
+    
+    <span class="flush_R_2">
+    <a id="newtabLink" href="" target="_blank">
+    <img src="images/newtab.jpg"
+         alt="Show this slide in new tab"
+         title="Show this slide in new tab" />
+    </a>
+    </span>
+    
+    <div class="wrapper">
+        <select id="slideDropdown" name="slideDropdown">
+        </select>
+        <span id="slideTotal" class="number"></span>
+    </div>
+    
+    <hr />
+    
+    </div>
+
+
+    <iframe id="storyFrame" width="100%" height="100px"
+        frameborder="0" marginwidth="0px" marginheight="0px" ></iframe>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Adding DOM Elements On Click</title>
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $(".add-p")
+                .click(addParagraph);
+        });
+
+        function addParagraph()
+        {
+            var p = $("<p contenteditable='true'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>");
+            p
+                .draggable({ grid: [20,20] })
+                .resizable();
+            p
+                .css("position", "absolute")
+                .css("left", "200px")
+                .css("top", "200px");
+            $("body").append(p);
+        }
+    </script>
+</head>
+<body>
+    <h1>Adding DOM Elements On Click</h1>
+    <button class="add-p">Add Paragraph</button>
+</body>
+</html>

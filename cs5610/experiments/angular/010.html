@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Simple Movie Library</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/MoviesApp.js"></script>
+    <link href="../../../css/bootstrap.css" rel="stylesheet" />
+</head>
+<body ng-app="MoviesApp">
+    <div ng-controller="MovieController" class="container">
+        <h1>Simple Movie Library</h1>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Year</th>
+                    <th>Rating</th>
+                    <th>Plot</th>
+                    <th>&nbsp;</th>
+                </tr>
+                <tr>
+                    <th><input ng-model="movie.title" class="form-control"/></th>
+                    <th><input ng-model="movie.year" class="form-control" /></th>
+                    <th><input ng-model="movie.rating" class="form-control" /></th>
+                    <th><input ng-model="movie.plot" class="form-control" /></th>
+                    <th>
+                        <button ng-click="updateMovie()" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </button>
+                        <button ng-click="addMovie()" class="btn btn-success">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="movie in movies">
+                    <td>{{movie.title}}</td>
+                    <td>{{movie.year}}</td>
+                    <td>{{movie.rating}}</td>
+                    <td>{{movie.plot}}</td>
+                    <td>
+                        <button ng-click="selectMovie(movie)" class="btn btn-warning">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </button>
+                        <button ng-click="removeMovie(movie)" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>

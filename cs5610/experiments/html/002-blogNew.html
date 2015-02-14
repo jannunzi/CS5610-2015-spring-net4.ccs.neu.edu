@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Post New Blog Article</title>
+</head>
+<body>
+    <header>
+        <h1>New Blog Post</h1>
+    </header>
+    <main>
+        <form>
+            <div>
+                Genre:
+                <input list="genre2"/>
+                <datalist id="genre2">
+                    <option>Rock</option>
+                    <option>Classical</option>
+                    <option>Country</option>
+                    <option>Dance</option>
+                </datalist>
+            </div>
+            <div>
+                Genre:
+                <select name="genre">
+                    <option vlaue="ROCK">Rock</option>
+                    <option value="CLASSICAL">Classical</option>
+                    <option value="COUNTRY">Country</option>
+                    <option value="NEW_AGE">New Age</option>
+                </select>
+            </div>
+            <div>
+                Progress:<br/>
+                <progress max="100" value="30"/>
+            </div>
+            <div>
+                Rate:<br />
+                <input type="number" min="0" max="5"/>
+            </div>
+            <div>
+                Stars:<br />
+                <input type="range" max="5" value="0" />
+            </div>
+            <div>
+                Category:<br />
+                <input type="checkbox" name="category" value="comedy" /> Comedy
+                <input type="checkbox" name="category" value="horror" /> Horror
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <div>
+                    <input value="me@here.com" id="email" placeholder="someone@somewhere.com" title="Please enter your email" name="email" type="email" />
+                </div>
+            </div>
+            <div>
+                <label for="date">Date Posted</label>
+                <div>
+                    <input id="date" title="Please enter date posted" name="date" type="datetime-local" />
+                </div>
+            </div>
+            <div>
+                <label for="week">Week Posted</label>
+                <div>
+                    <input id="week" title="Please enter week posted" name="week" type="week" />
+                </div>
+            </div>
+            <div>
+                Subscribe:<br/>
+                <label><input type="radio" name="subscribe" value="yes" /> Yes</label>
+                <label><input type="radio" name="subscribe" value="no" /> No</label>
+            </div>
+            <div>
+                <button type="submit">Post</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

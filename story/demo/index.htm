@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: demo/index.htm
+    
+    Copyright 2012,
+    Richard Rasala,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    rasala@ccs.neu.edu
+
+    January 25, 2012
+-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+        content="initial-scale=1, minimum-scale=1">
+
+    <title>Demo</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../css/slide.css" />
+    
+    <link rel="Stylesheet" type="text/css" href="../css/screen.css"
+          media="screen" />
+    
+    <link rel="Stylesheet" type="text/css" href="../css/print.css"
+          media="print" />
+</head>
+
+<body>
+
+<div class="pad">
+
+<h1 class="center">Demo Introduction</h1>
+
+<p>
+The purpose of this demo is to illustrate using links from 
+well-known sites to create a story.
+</p>
+
+<p>
+However, when this demo was first constructed, we learned that
+<i>not all sites will permit themselves to be used in a story</i>.
+We explain below the reasons for this from both a policy standpoint
+and a technical perspective.
+</p>
+
+<p>
+The 6 test sites are:
+</p>
+
+<ul>
+  <li>
+  <a href="http://www.apple.com/" target="_blank">
+  Apple
+  </a>
+  </li>
+
+  <li>
+  <a href="http://www.google.com/" target="_blank">
+  Google
+  </a>
+  </li>
+
+  <li>
+  <a href="http://jquery.com/" target="_blank">
+  jQuery
+  </a>
+  </li>
+
+  <li>
+  <a href="http://www.amazon.com/" target="_blank">
+  Amazon
+  </a>
+  </li>
+
+  <li>
+  <a href="http://www.microsoft.com/" target="_blank">
+  Microsoft
+  </a>
+  </li>
+
+  <li>
+  <a href="http://www.nytimes.com/" target="_blank">
+  The New York Times
+  </a>
+  </li>
+</ul>
+
+<p>
+We learned immediately that The New York Times would not
+permit its pages to be shown within the <code>iframe</code> used
+to implement the <b>Story Utility</b>.  Furthermore, the approach
+of the Times is quite agressive.  If we attempt to place a page
+from the Times in the <b>Story Utility</b>, then the utility will
+be blown away and the outer page will redirect to the Times site.
+You may see this in practice when you attempt to go to the last
+slide of this story.
+</p>
+
+<p>
+Originally, all of the other 5 sites worked fine in the
+<b>Story Utility</b>.
+</p>
+
+<ul>
+  <li>
+    Sometime in 2011, Google made the decision that it too would
+    not permit its pages to be shown within an <code>iframe</code>.
+    The Google approach is more gentle.  If Google detects an
+    attempt to put one of its pages into an <code>iframe</code>,
+    it will simply stop and leave any existing content in the
+    <code>iframe</code> as is.
+  </li>
+  <li>
+    Sometime in 2012, jQuery made the same decision as Google
+    about its home page.  Curiously, at this time, the other
+    pages on the jQuery site do render in an <code>iframe</code>.
+  </li>
+</ul>
+
+<p>
+You may see this in
+practice when you go to the Google or jQuery slide using either the arrow
+buttons or the dropdown menu.
+</p>
+
+<p>
+Furthermore, if you are at the Google or jQuery slide and click the icon
+<img src="../images/newtab.jpg" alt="new tab" title="new tab" />,
+then the real page will appear in a new tab.
+</p>
+
+<p>
+Let us consider why these sites might be doing
+what they are doing.  There is a concept in web design called a
+<i>mash up</i> in which the content of multiple pages is shown
+in a single composite page.  A common way to implement a
+<i>mash up</i> is via multiple <code>iframe</code>&rsquo;s on a
+page.  Therefore:
+</p>
+
+<p class="indent">
+The decision of a site not to permit a page to be shown within
+an <code>iframe</code> is tantamount to a policy decision that
+the site does not wish to be part of a <i>mash up</i>.
+</p>
+
+<p>
+For The New York Times, the policy decision is that is does not
+wish to have its news coverage shown in a <i>mash up</i> with the
+content from other news sites.
+</p>
+
+<p>
+For Google, the policy decision is that is does not wish to have
+its search engine shown in a <i>mash up</i> with competing search
+engines.
+</p>
+
+<p>
+For jQuery, the reason for its decision is a mystery.
+</p>
+
+<hr />
+
+<p>
+Let us now explain in principle how a site may detect that it is
+being placed in an <code>iframe</code>.  When a page is rendered
+either in a complete browser tab or in a nested <code>iframe</code>,
+the Javascript object <code>window</code> represents the portion
+of the browser area that the page is being displayed in.  Note
+that the same variable name is used either at top level or in a
+nested situation.  This is what enables most pages to render
+equally well at top level or in a nested <code>iframe</code>.
+Most pages simply do not care where they are rendered.  However,
+Javascript can test where the page actually sits.  There is a
+second object <code>window.top</code> that always represents the
+outermost window panel.  Therefore:
+</p>
+
+<p class="indent">
+A page is nested if <code>window.top</code> is not equal to
+<code>window</code>.
+</p>
+
+<p>
+We have not been able to track down exactly where The New York Times
+and the other sites make a test of this nature but it is clear that
+some such test is being made in the Javascript code.  Once nesting
+is detected either the page does not render or the nesting is blown
+away.
+</p>
+
+<p>
+If you wish to explore nesting, click on
+<a href="../nested/index.htm" target="_blank">Nest Test</a>.
+</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿  !title=Mini Demo
+  !pagetitle=Mini Demo of the Links Utility
+
+  !br
+  !heading=This introduction page is created dynamically using the <b>Links Utility</b>
+../links.htm?minidemo/          Mini Demo Introduction
+
+  !br
+  !heading=This is the story file
+story.txt                       The story file for this story
+
+  !hr
+  !comment=This mini demo uses 4 links that work in the <b>Story Utility</b>
+http://www.apple.com/           Apple
+http://jquery.com/              jQuery
+http://www.amazon.com/          Amazon
+http://www.microsoft.com/       Microsoft

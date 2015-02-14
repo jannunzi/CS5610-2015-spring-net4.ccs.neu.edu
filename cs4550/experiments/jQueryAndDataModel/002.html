@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Template</title>
+    <link href="./css/bootstrap.css" rel="stylesheet" />
+    <link href="css/jquery-ui.min.css" rel="stylesheet" />
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script>
+        var movies = [
+            { id: 1231, title: "Movie 1", rating: 80, year: 1984, plot: "Plot 1" },
+            { id: 1232, title: "Movie 2", rating: 81, year: 1985, plot: "Plot 2" },
+            { id: 1233, title: "Movie 3", rating: 82, year: 1986, plot: "Plot 3" },
+            { id: 1234, title: "Movie 4", rating: 83, year: 1987, plot: "Plot 4" },
+            { id: 1235, title: "Movie 5", rating: 84, year: 1988, plot: "Plot 5" },
+            { id: 1236, title: "Movie 6", rating: 85, year: 1989, plot: "Plot 6" }
+        ];
+
+        var template;
+
+        $(function () {
+
+            template = $(".template");
+
+            console.log("Hello from jQuery");
+            console.log(movies);
+            renderMovies(movies);
+
+            $("#movies").on("click", ".remove", removeMovie);
+        });
+
+        function removeMovie(event)
+        {
+            console.log(movies);
+            var button = $(event.currentTarget);
+            var id = button.attr('id');
+            movies.splice(id, 1);
+            console.log(movies);
+
+            renderMovies(movies);
+        }
+
+        function renderMovies(movies)
+        {
+
+            var container = $("#movies");
+            container.empty();
+
+            for (var m = 0; m < movies.length; m++) {
+                var movie = movies[m];
+                var cloned = template.clone();
+
+                cloned.find(".id").html(movie.id);
+                cloned.find(".title").html(movie.title);
+                cloned.find(".year").html(movie.year);
+                cloned.find(".rating").html(movie.rating);
+                cloned.find(".plot").html(movie.plot);
+                cloned.find(".remove").attr("id", m);
+
+                container.append(cloned);
+            }
+//            $(".remove").click(removeMovie);
+
+        }
+
+    </script>
+    <style>
+        body{
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Project name</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <h1>My Favorite Movies</h1>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Year</th>
+                    <th>Rating</th>
+                    <th>Short Plot</th>
+                    <th>&nbsp;</th>
+                </tr>
+                <tr>
+                    <th><input class="form-control"/></th>
+                    <th><input class="form-control" /></th>
+                    <th><input class="form-control" /></th>
+                    <th><input class="form-control" /></th>
+                    <th><input class="form-control" /></th>
+                    <th>
+                        <button class="btn btn-success">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="movies">
+                <tr class="template">
+                    <td class="id">123</td>
+                    <td class="title">Movie 1</td>
+                    <td class="year">1984</td>
+                    <td class="rating">80%</td>
+                    <td class="plot">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</td>
+                    <td>
+                        <button class="btn btn-danger remove">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>123</td>
+                    <td>Movie 1</td>
+                    <td>1984</td>
+                    <td>80%</td>
+                    <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</td>
+                    <td>
+                        <button class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>123</td>
+                    <td>Movie 1</td>
+                    <td>1984</td>
+                    <td>80%</td>
+                    <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</td>
+                    <td>
+                        <button class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>123</td>
+                    <td>Movie 1</td>
+                    <td>1984</td>
+                    <td>80%</td>
+                    <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</td>
+                    <td>
+                        <button class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>123</td>
+                    <td>Movie 1</td>
+                    <td>1984</td>
+                    <td>80%</td>
+                    <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</td>
+                    <td>
+                        <button class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: storyfiles/structure1.htm
+    
+    Copyright 2012,
+    Richard Rasala,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    rasala@ccs.neu.edu
+    
+    January 25, 2012
+-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+        content="initial-scale=1, minimum-scale=1">
+
+    <title>Story File Structure 1</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../css/slide.css" />
+    
+    <link rel="Stylesheet" type="text/css" href="../css/screen.css"
+          media="screen" />
+    
+    <link rel="Stylesheet" type="text/css" href="../css/print.css"
+          media="print" />
+    
+</head>
+<body>
+
+<div class="pad">
+
+<h1 class="center">Story File Structure 1</h1>
+
+<p>
+The <b>Story Utility</b> is normally called with a query string
+that points to a <b>story file</b>.
+A story file provides a <b>list of the links</b> to each
+web page that will form a slide in the story.
+</p>
+
+<p>
+The <i>path-to-a-story-file</i> should be provided as a url that is
+placed in the <i>query string</i> when the <b>Story Utility</b> is
+invoked.
+</p>
+
+<pre class="indent1">..../story/index.htm?<i>path-to-a-story-file</i></pre>
+
+<p>
+By default, the story opens with slide 1.  By using an additional 
+query parameter <code>start</code>, you may specify the number
+<code><i>N</i></code> of the slide to start with.
+</p>
+
+<pre class="indent1">..../story/index.htm?<i>path-to-a-story-file</i>&start=<i>N</i></pre>
+
+<p>
+Normally, <code><i>N</i></code> should fall between 1 and the total
+number of slides.  However, if <code><i>N</i></code> is outside of
+this range, then via &ldquo;automatic wraparound&rdquo; the value
+will be mapped into the proper range.  For example, the setting
+<code>start=0</code> will cause the story to open with the last
+slide.
+</p>
+
+<p>
+A story file should be <b>structured</b> as follows.
+</p>
+
+<hr />
+
+<p>
+Each line in the story file that <i>starts with a non-blank character</i>
+should consist of the data for one slide in the story:
+</p>
+
+<ul>
+  <li>The <code>url</code> for a slide in the story</li>
+  <li>Whitespace</li>
+  <li>The text of a <b>title</b> to identify the slide
+  </li>
+</ul>
+
+<p>
+The <b>title</b> may contain whitespace internally.
+</p>
+
+<p>
+If the <b>title</b> is omitted
+then the <code>url</code> will become its own <b>title</b>.
+Usually, it is far better to supply an explicit <b>title</b>
+for each slide.
+</p>
+
+<hr />
+
+<p>
+Each line in the story file that is <i>empty or starts with a blank</i>
+is ignored when constructing the slide show.  This enables spacing and 
+comments in the story file.
+</p>
+
+<hr />
+
+<p>
+If the <i>path-to-a-story-file</i> points to a web directory but omits
+the story file name then the story file name is assumed to be
+<code>story.txt</code>.
+This convention makes it easier to reference a story.
+</p>
+
+<hr />
+
+<p>
+The structure of a <b>story file</b> is illustrated by the next slide
+that shows the <code>story.txt</code> file for this documentation.
+</p>
+
+</div>
+
+</body>
+</html>

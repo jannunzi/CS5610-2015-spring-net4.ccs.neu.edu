@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Responsive Menu</title>
+    <style>
+        #menu-link, #small-menu { display: none; }
+        p {
+            clear: both;
+        }
+        @media screen and (min-width: 350px) {
+            .field-label, .field {
+                float: left;
+            }
+        }
+        @media screen and (max-width: 500px) {
+            body { background-color: red; }
+
+            body header nav {
+                display: none;
+            }
+
+            #menu-link, #small-menu { display: block; }
+
+            .container {
+                width: 300px;
+                margin: auto;
+            }
+        }
+        @media screen and (min-width: 500px) and (max-width:700px) {
+            body { background-color: green; }
+            .container {
+                width: 400px;
+                margin: auto;
+            }
+            .row {
+                width: 400px;
+                clear: both;
+            }
+            .col-6 {
+                width: 200px;
+                float: left;
+            }
+        }
+        @media screen and (min-width: 700px) {
+            body { background-color: yellow; }
+            .container {
+                width: 600px;
+                margin: auto;
+            }
+            .row {
+                width: 600px;
+                clear: both;
+            }
+            .col-6 {
+                width: 300px;
+                float: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Responsive Menu</h1>
+            <nav>
+                <a href="#">Home</a> |
+                <a href="#">Contact Us</a> |
+                <a href="#">About Us</a> |
+                <a href="#">Jobs</a> |
+                <a href="#">Search</a> |
+                <a href="#">Profile</a> |
+            </nav>
+            <a href="#menu" id="menu-link">Menu</a>
+        </header>
+        <div class="row">
+            <div class="col-6">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+            </div>
+            <div class="col-6">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+            </div>
+        </div>
+
+        <div class="field-group">
+            <label class="field-label">Field Label</label>
+            <div class="field">
+                <input />
+            </div>
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        </p>
+        <a name="menu"></a>
+        <nav id="small-menu">
+            <a href="#">Home</a><br/>
+            <a href="#">Contact Us</a><br />
+            <a href="#">About Us</a><br />
+            <a href="#">Jobs</a><br />
+            <a href="#">Search</a><br />
+            <a href="#">Profile</a>
+        </nav>
+    </div>
+</body>
+</html>

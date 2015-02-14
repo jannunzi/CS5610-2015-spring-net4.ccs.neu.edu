@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+
+<!--
+    Copyright 2012,
+    Richard Rasala,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    rasala@ccs.neu.edu
+
+    January 25, 2012
+-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+        content="initial-scale=1, minimum-scale=1">
+
+    <title>Nest Test</title>
+
+    <style type="text/css">
+    
+    @media screen {
+        body {
+            font-size: 120%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .pad {
+            padding: 20px;
+        }
+    }
+
+    @media screen and (min-width: 500px) {
+        body {
+            width: 500px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+    }
+
+    @media screen and (max-width: 499px) {
+        body {
+            max-width: 100%;
+        }
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    a {
+        color: #08f;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: #88f;
+    }
+
+    a:hover, a:visited:hover {
+        color: #f00;
+    }
+
+    </style>
+    
+    <script type="text/javascript"
+        src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        function initialize() {
+            var w = window;
+            var t = window.top;
+            var level = 0;
+
+            while (w != t) {
+                w = w.parent;
+                level++;
+            }
+
+            $("#level").text("" + level);
+        }
+
+        $(initialize);
+    </script>
+    
+</head>
+<body>
+
+<div class="pad">
+
+<p>
+This experiment illustrates that a page may use Javascript
+to detect how deeply nested its window object is within a
+browser pane.  A page at the top will have a nesting level
+of zero.
+</p>
+
+<p>
+View page
+<a href="../showfile.htm?nested/index.htm" target="_blank">Source</a>
+</p>
+
+<p><b>Nesting Level: <span id="level"></span></b></p>
+
+<p>
+<a href="../index.htm?nested/">Nest Me</a>
+</p>
+
+</div>
+
+</body>
+</html>

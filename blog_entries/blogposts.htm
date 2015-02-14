@@ -1,0 +1,172 @@
+﻿<h3>Blog Posts, Viewing Files, and HTML Encoding</h3>
+
+<p>This is a blog post about making blog posts.</p>
+
+<p>Here are some important points:</p>
+
+<ul>
+  <li>
+  Blog posts should be placed in the directory
+  <code>~/blog_entries</code>.
+  </li>
+  <li>
+  Blog posts should be <i>snippets</i> of HTML
+  that are placed in files with extension
+  <code>.htm</code>
+  </li>
+  <li>
+  The <i>snippets</i> of HTML will be gathered
+  by algorithms into a composite file that will
+  be served to the client.  Because of this, it
+  is important that the following tags
+  <b>not</b> be in the file:
+    <ul>
+      <li><code>&lt;!DOCTYPE html&gt;</code></li>
+      <li><code>&lt;html&gt;</code></li>
+      <li><code>&lt;head&gt;</code></li>
+      <li><code>&lt;body&gt;</code></li>
+    </ul>
+  The file really should consist only of a
+  <i>snippet</i>.
+  </li>
+</ul>
+
+<p>
+Blog posts may contain links and often should contain
+links to the content being discussed in the post.  As
+an example, here is a link to view the source code of
+this blog post:
+</p>
+
+<p>
+<b>View: </b>
+<a href="../fileview/default.aspx?~/blog_entries/blogposts.htm"
+    target="_blank">
+<code>~/blog_entries/blogposts.htm</code>
+</a>
+</p>
+
+<hr />
+
+<p>
+It may sometimes be important to show HTML source code
+directly in a blog post.  To do this, one must be
+clever.  If you just drop the HTML source code in, the
+browser will process it just like any other HTML and
+you will see the result of the code and not its source.
+</p>
+
+<p>
+To view HTML source code, you must do two steps:
+</p>
+
+<ul>
+  <li>
+  The HTML source must be <b>HTML encoded</b> so that
+  its angle brackets and other special characters are
+  represented in a way that will not trigger the
+  normal browser transformations.
+  </li>
+  <li>
+  The <b>HTML encoded</b> text must be inserted in a
+  block <code>&lt;pre&gt;&lt;/pre&gt;</code>.  This is
+  a <i>pre-formatted text block</i> that will preserve
+  the spacing and the line feeds correctly.
+  </li>
+</ul>
+
+<p>
+You do <b>not</b> want to do <b>HTML encoding</b> by
+hand.  Instead, use the following tool:
+</p>
+
+<p>
+<a href="http://net4.ccs.neu.edu/home/rasala/utility/TextToHTML.aspx"
+    target="_blank">
+Text to HTML
+</a>
+</p>
+
+<p>
+To use this tool, put the HTML source in the text box and
+then click the <b>HTML Encode Text</b> button.  Then select the
+converted source and copy/paste it into a
+<code>&lt;pre&gt;&lt;/pre&gt;</code> block in your file.
+</p>
+
+<p>
+As an example, we insert below the first section of this blog
+post in HTML encoded form.
+</p>
+
+<hr />
+
+<pre>&lt;h3&gt;Blog Posts, Viewing Files, and HTML Encoding&lt;/h3&gt;
+
+&lt;p&gt;This is a blog post about making blog posts.&lt;/p&gt;
+
+&lt;p&gt;Here are some important points:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+  Blog posts should be placed in the directory
+  &lt;code&gt;~/blog_entries&lt;/code&gt;.
+  &lt;/li&gt;
+  &lt;li&gt;
+  Blog posts should be &lt;i&gt;snippets&lt;/i&gt; of HTML
+  that are placed in files with extension
+  &lt;code&gt;.htm&lt;/code&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+  The &lt;i&gt;snippets&lt;/i&gt; of HTML will be gathered
+  by algorithms into a composite file that will
+  be served to the client.  Because of this, it
+  is important that the following tags
+  &lt;b&gt;not&lt;/b&gt; be in the file:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  The file really should consist only of a
+  &lt;i&gt;snippet&lt;/i&gt;.
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+Blog posts may contain links and often should contain
+links to the content being discussed in the post.  As
+an example, here is a link to view the source code of
+this blog post:
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;View: &lt;/b&gt;
+&lt;a href=&quot;../fileview/default.aspx?~/blog_entries/blogposts.htm&quot;
+    target=&quot;_blank&quot;&gt;
+&lt;code&gt;~/blog_entries/blogposts.htm&lt;/code&gt;
+&lt;/a&gt;
+&lt;/p&gt;</pre>
+
+<hr />
+
+<p>
+Here is a summary of the conversions done by the
+<b>HTML encoding</b> process:
+</p>
+
+<ul>
+  <li>
+  The character <code>&lt;</code> converts to <code>&amp;lt;</code>
+  </li>
+  <li>
+  The character <code>&gt;</code> converts to <code>&amp;gt;</code>
+  </li>
+  <li>
+  The character <code>&amp;</code> converts to <code>&amp;amp;</code>
+  </li>
+  <li>
+  The character <code>&quot;</code> converts to <code>&amp;quot;</code>
+  </li>
+</ul>

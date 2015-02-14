@@ -1,0 +1,22 @@
+﻿/*
+    File: style_screen.css
+        
+    Copyright 2011,
+    Richard Rasala,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    rasala@ccs.neu.edu
+    
+    December 22, 2011
+*/
+
+body {
+    width:900px;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.pad {
+    padding: 10px;
+}

@@ -1,0 +1,22 @@
+﻿/*
+    File: blog_screen.css
+        
+    Copyright 2010,
+    Richard Rasala,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    rasala@ccs.neu.edu
+    
+    September 14, 2010
+*/
+
+.page_content {
+    position:absolute;
+    width:80%;
+}
+
+.page_menu {
+    position:absolute;
+    left:82%;
+    width:18%;
+}

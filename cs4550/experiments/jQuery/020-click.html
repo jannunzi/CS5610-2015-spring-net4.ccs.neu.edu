@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Click Event Handler</title>
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("h1")
+                .css("background-color", "yellow")
+                .click(function (event) {
+                    console.log(event);
+                    var elem = $(event.target);
+                    elem.css("background-color", "red");
+                    console.log(elem);
+                    $("#myButton").html("sdfsdf");
+                });
+
+            $.ajax({
+                url: "http://www.myapifilms.com/imdb?name=Star%20Wars&format=JSONP&filmography=0&limit=1&lang=en-us&exactFilter=0&bornDied=0&starSign=0&uniqueName=0&actorActress=0&actorTrivia=0&actorPhotos=N&actorVideos=N&salary=0&spouses=0&tradeMark=0&personalQuotes=0",
+                dataType: "jsonp",
+                success : function(response)
+                {
+                    console.log(response[0].name);
+                    $("#myButton").html(response[0].name);
+                }
+            })
+        });
+
+        
+    </script>
+</head>
+<body>
+    <h1>Click Event Handler</h1>
+    <button id="myButton">The Button</button>
+</body>
+</html>

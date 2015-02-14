@@ -1,0 +1,236 @@
+﻿/*
+    File: css/slide.css
+    
+    This is the CSS we use for certain slides
+    and for error messages in the Story Utility.
+    
+    A user of the Story Utility might wish to
+    modify or replace this file to meet their
+    own goals.
+
+    Copyright 2011,
+    Richard Rasala,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    rasala@ccs.neu.edu
+    
+    September 28, 2011
+*/
+
+body {
+    background: white;
+}
+
+
+.times {
+    font-family: "Times New Roman", Serif;
+}
+
+
+.title, .subtitle, .subsubtitle {
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.title {
+    font-size: 150%;
+}
+
+.subtitle {
+    font-size: 140%;
+}
+
+.subsubtitle {
+    font-size: 130%;
+}
+
+
+p {
+    font-size: 125%;
+	text-align: justify; 
+    margin-top: 0.5em
+}
+
+pre { font-size: 125%; }
+
+
+li {
+    font-size: 120%;
+	text-align: justify; 
+}
+
+li ul > li {
+    font-size: 90%;
+}
+
+li ul > li ul > li {
+    font-size: 90%;
+}
+
+li ul > li ul > li ul > li {
+    font-size: 90%;
+}
+
+
+.p, .p1, .p2, .p3, .p4, .p5
+td, dd
+{
+	font-size: 100%;
+	text-align: justify; 
+}
+
+.p, .p1, .p2, .p3, .p4, .p5
+{
+    margin-top: 0.5em
+}
+
+
+.h {
+    font-size: 150%;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	text-align: justify;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.huge { font-size: 200%}
+
+h1 { font-size: 150%; }
+
+h2 { font-size: 140%; }
+
+h3 { font-size: 130%; }
+
+h4 { font-size: 120%; }
+
+h5 { font-size: 110%; }
+
+h6 { font-size: 100%; }
+
+
+.centerblock
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center  { text-align: center; }
+
+.left    { text-align: left; }
+
+.right   { text-align: right; }
+
+.justify { text-align: justify; }
+
+
+.indent { margin-left: 2%; }
+
+.p1, .indent1 { margin-left: 5%; }
+
+.p2, .indent2 { margin-left: 10%; }
+
+.p3, .indent3 { margin-left: 15%; }
+
+.p4, .indent4 { margin-left: 20%; }
+
+.p5, .indent5 { margin-left: 25%; }
+
+
+b, i, em, strong, code, pre, .bold, .italic, .error {
+    font-weight: bold;
+}
+
+i, em, .italic, .italicnormal { font-style: italic; }
+
+code, pre, .blue { color: #00f; }
+
+.red, .error { color: #f00; }
+
+.green { color: #007f00; }
+
+
+code, pre, kbd, tt, .mono {
+    font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+}
+
+
+a, a > code {
+    color: #08f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited, a:visited > code {
+    color: #88f;
+}
+
+a:hover, a > code:hover, a:visited:hover, a:visited > code:hover {
+    color: #f00;
+}
+
+
+.baseline    { vertical-align: baseline; }
+
+.text-bottom { vertical-align: text-bottom; }
+
+.text-top    { vertical-align: text-top; }
+
+.middle      { vertical-align: middle; }
+
+.sub         { vertical-align: sub; }
+
+.super       { vertical-align: super; }
+
+.bottom      { vertical-align: bottom; }
+
+.top         { vertical-align:  top; }
+
+
+.floatleft,       .floatL       { float: left; }
+
+.clearleft,       .clearL       { clear: left; }
+
+.clearfloatleft,  .clearfloatL  { clear: left; float: left; }
+
+.floatright,      .floatR       { float: right; }
+
+.clearright,      .clearR       { clear: right; }
+
+.clearfloatright, .clearfloatR  { clear: right; float: right; }
+
+.clearboth,       .clearB       { clear: both; }
+
+
+.relative { position: relative; }
+
+.absolute { position: absolute; }
+
+.fixed    { position: fixed; }
+
+
+.padded { padding: 2px; }
+
+.border { padding: 2px; border: 1px solid black; }
+
+.spaced { margin-bottom: 10px; }
+
+
+table
+{
+    border-collapse: collapse;
+}
+
+td,th
+{
+    border: solid 1px black;
+    padding: 2px 4px;
+}

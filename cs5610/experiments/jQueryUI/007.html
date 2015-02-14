@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Add Elements On Click</title>
+    <link rel="stylesheet" href="css/jquery-ui.css"/>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#addParagraph").click(function () {
+                addParagraph("New Paragraph", 150,150);
+            })
+            $("#save").click(save);
+            $("#load").click(load);
+        });
+
+        function load()
+        {
+            var page = localStorage.getItem("page123");
+            if (page == null)
+                return;
+            page = JSON.parse(page);
+            console.log(page);
+            for(var p in page)
+            {
+                var par = page[p];
+                var text = par.text;
+                var x = par.x;
+                var y = par.y;
+                addParagraph(text, x, y);
+            }
+        }
+
+        function save()
+        {
+            var allPs = $("p");
+
+            var paragraphs = [];
+            allPs.each(function (index, item) {
+                var p = $(item);
+                var pos = p.position();
+                var text = p.text();
+                var pObj = {
+                    text: text,
+                    x: pos.left,
+                    y: pos.top
+                };
+                paragraphs.push(pObj);
+            });
+            pStr = JSON.stringify(paragraphs);
+            localStorage.setItem("page123", pStr);
+        }
+
+        function addParagraph(text, x, y)
+        {
+            var p = $("<p contenteditable='true'>");
+            p
+                .html(text)
+                .draggable({grid:[20,20]})
+                .resizable()
+                .css({
+                    "position": "absolute",
+                    "left": x,
+                    "top": y
+                });
+            $("body").append(p);
+        }
+    </script>
+</head>
+<body>
+    <h1>Add Elements On Click</h1>
+    <button id="addParagraph">Add Paragraph</button>
+    <button id="save">Save</button>
+    <button id="load">Load</button>
+</body>
+</html>

@@ -1,0 +1,8 @@
+﻿index.htm                       Demo Introduction
+story.txt                       The story file for this story
+http://www.apple.com/           Apple
+http://www.google.com/          Google
+http://jquery.com/              jQuery
+http://www.amazon.com/          Amazon
+http://www.microsoft.com/       Microsoft
+http://www.nytimes.com/         The New York Times

@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../../js/jquery.js"></script>
+    <script>
+
+        $.ajax({
+            url: "http://www.myapifilms.com/imdb?title=Avatar&format=JSONP&aka=0&business=0&seasons=0&seasonYear=0&technical=0&filter=N&exactFilter=0&limit=10&lang=en-us&actors=N&biography=0&trailer=0&uniqueName=0&filmography=0&bornDied=0&starSign=0&actorActress=0&actorTrivia=0&movieTrivia=0&awards=0&moviePhotos=N&movieVideos=N",
+            dataType: "jsonp",
+            success: handleResponse
+        });
+
+        function handleResponse(response)
+        {
+            console.log(response);
+            var ul = $("#movies");
+            ul.empty();
+            for(var i=0; i<response.length; i++)
+            {
+                var movie = response[i];
+                var title = movie.title;
+                var plot = movie.plot;
+                var urlPoster = movie.urlPoster;
+                var idIMDB = movie.idIMDB;
+                console.log([title, idIMDB, urlPoster]);
+                var img = $("<img>").attr("src", urlPoster);
+                var p = $("<p>").html(plot);
+                var t = $("<p>")
+                    .html(title)
+                    .attr("id", idIMDB);
+                var li = $("<li>");
+                li.append(t);
+                li.append(p);
+                li.append(img);
+                ul.append(li);
+            }
+        }
+
+    </script>
+</head>
+<body>
+<h1>Hello</h1>
+
+    <ul id="movies">
+
+    </ul>
+
+</body>
+</html>

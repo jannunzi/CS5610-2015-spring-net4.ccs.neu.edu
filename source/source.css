@@ -1,0 +1,189 @@
+﻿/*
+    Common css for source, statistics, search, file view,
+    and related tools.
+*/
+
+body
+{
+    font-weight: bold;
+}
+
+p, li
+{
+    font-size: 100%;
+    text-align: justify;
+}
+
+h1, h2, h3, h4, h5, h6, .h
+{
+    font-weight: bold;
+    text-align: justify;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.h         { font-size: 120%; }
+
+h1, .fs200 { font-size: 200%; }
+
+.fs195     { font-size: 195%; }
+
+.fs190     { font-size: 190%; }
+
+.fs185     { font-size: 185%; }
+
+.fs180     { font-size: 180%; }
+
+.fs175     { font-size: 175%; }
+
+h2, .fs170 { font-size: 170%; }
+
+.fs165     { font-size: 165%; }
+
+.fs160     { font-size: 160%; }
+
+.fs155     { font-size: 155%; }
+
+h3, .fs150 { font-size: 150%; }
+
+.fs145     { font-size: 145%; }
+
+.fs140     { font-size: 140%; }
+
+.fs135     { font-size: 135%; }
+
+h4, .fs130 { font-size: 130%; }
+
+.fs125     { font-size: 125%; }
+
+.fs120     { font-size: 120%; }
+
+h5, .fs115 { font-size: 115%; }
+
+.fs110     { font-size: 110%; }
+
+.fs105     { font-size: 105%; }
+
+h6, .fs100 { font-size: 100%; }
+
+.fs95      { font-size:  95%; }
+
+.fs90      { font-size:  90%; }
+
+.fs85      { font-size:  85%; }
+
+.fs80      { font-size:  80%; }
+
+.fs75      { font-size:  75%; }
+
+.centerblock
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center, .centered
+{
+    text-align: center;
+}
+
+.left
+{
+    text-align: left;
+}
+
+.right
+{
+    text-align: right;
+}
+
+.justify
+{
+    text-align: justify;
+}
+
+code, pre, .mono, .fileview
+{
+    font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+}
+
+code, pre, .blue
+{
+    color: #00f;
+}
+
+a, a > code
+{
+    color: #08f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited, a:visited > code
+{
+    color: #88f;
+}
+
+a:hover, a > code:hover, a:visited:hover, a:visited > code:hover
+{
+    color: #f00;
+}
+
+table
+{
+    border-collapse: collapse;
+}
+
+.filedata td
+{
+    padding: 5px;
+    text-align: center;
+    border: solid 1px black;
+}
+
+.showfilebutton
+{
+    background-color: #DEB887;
+}
+
+.downloadbutton
+{
+    background-color: Yellow;
+}
+
+.highlight
+{
+    background-color: Yellow;
+    outline: 1px dotted black;
+}
+
+.hidden
+{
+    display: none;
+}
+
+.error
+{
+    font-weight: bold;
+    color: Red;
+}
+
+.fileview > span
+{
+    display: inline-block;
+    width: 8%;
+}
+
+.fileview > span + span
+{
+    width: 35%;
+    color: Blue;
+}
+
+.fileview > span + span + span
+{
+    width: 18%;
+    color: Black;
+    text-align: right;
+}
+

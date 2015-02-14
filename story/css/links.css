@@ -1,0 +1,107 @@
+﻿/*
+    File: css/links.css
+    
+    This is the CSS we use for links.htm and
+    whatisnext.htm.
+    
+    Copyright 2011,
+    Richard Rasala,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    rasala@ccs.neu.edu
+    
+    September 28, 2011
+*/
+
+body {
+    background: white;
+}
+
+
+.times {
+    font-family: "Times New Roman", Serif;
+}
+
+
+.title {
+    font-size: 140%;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.list {
+    font-size: 125%;
+    margin-bottom: 5px;
+    text-align: justify;
+}
+
+.comment {
+    font-size: 125%;
+    font-style: italic;
+    text-align: justify;
+    margin-bottom: 5px;
+}
+
+
+.heading {
+    font-size: 125%;
+    font-style: italic;
+    text-align: justify;
+    margin-bottom: 5px;
+    margin-left: 3%;
+}
+
+
+.indent {
+    margin-left: 3%;
+}
+
+
+.italic {
+    font-style: italic;
+}
+
+.normal_style {
+    font-style: normal;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.normal_weight {
+    font-weight: normal;
+}
+
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.justify {
+    text-align: justify;
+}
+
+
+a, a > code {
+    color: #08f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited, a:visited > code {
+    color: #88f;
+}
+
+a:hover, a > code:hover, a:visited:hover, a:visited > code:hover {
+    color: #f00;
+}

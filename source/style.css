@@ -1,0 +1,674 @@
+/*
+    File: style.css
+        
+    Copyright 2010,
+    Richard Rasala,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    rasala@ccs.neu.edu
+    
+    September 15, 2010
+*/
+
+body {
+    background: white;
+}
+
+
+/*
+    The older CSS classes
+    
+        .block0, .block1, .block2, .block3, .block4, .block5
+    
+    will be replaced by the newer and briefer CSS classes
+    
+        .p, .p1, .p2, .p3, .p4, .p5
+        
+    Both sets of names will be retained for compatibility.
+*/
+
+
+p, .p, .p1, .p2, .p3, .p4, .p5,
+.block0, .block1, .block2, .block3, .block4, .block5,
+td, dd, li
+{
+    font-size: 100%;
+    text-align: justify; 
+}
+
+
+p, .p, .p1, .p2, .p3, .p4, .p5,
+.block0, .block1, .block2, .block3, .block4, .block5
+{
+    margin-top: 0.5em
+}
+
+
+h1, h2, h3, h4, h5, h6, .h {
+    font-weight: bold;
+    text-align: justify;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+
+/*
+    Default font-size for h* tags and
+    general classes for font-size in 5% increments.
+*/
+
+h1, .fs200 { font-size: 200%; }
+
+.fs195     { font-size: 195%; }
+
+.fs190     { font-size: 190%; }
+
+.fs185     { font-size: 185%; }
+
+.fs180     { font-size: 180%; }
+
+.fs175     { font-size: 175%; }
+
+h2, .fs170 { font-size: 170%; }
+
+.fs165     { font-size: 165%; }
+
+.fs160     { font-size: 160%; }
+
+.fs155     { font-size: 155%; }
+
+h3, .fs150 { font-size: 150%; }
+
+.fs145     { font-size: 145%; }
+
+.fs140     { font-size: 140%; }
+
+.fs135     { font-size: 135%; }
+
+h4, .fs130 { font-size: 130%; }
+
+.fs125     { font-size: 125%; }
+
+.fs120     { font-size: 120%; }
+
+h5, .fs115 { font-size: 115%; }
+
+.fs110     { font-size: 110%; }
+
+.fs105     { font-size: 105%; }
+
+h6, .fs100 { font-size: 100%; }
+
+.fs95      { font-size:  95%; }
+
+.fs90      { font-size:  90%; }
+
+.fs85      { font-size:  85%; }
+
+.fs80      { font-size:  80%; }
+
+.fs75      { font-size:  75%; }
+
+
+/*
+    Style to center a block element such as a table
+    whose width is not 100%.
+*/
+
+.centerblock
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*
+    General classes to set text-align:
+        .center, .centered, .left, .right, .justify
+    
+    Note: text-align css classes cannot be used to
+    center block elements.  Use .centerblock above.
+*/
+
+.center, .centered { text-align: center; }
+
+.left              { text-align: left; }
+
+.right             { text-align: right; }
+
+.justify           { text-align: justify; }
+
+
+/*
+    Entities with indent 2%.
+    
+    Only sets indentation and adjusts nothing else.
+*/
+
+.indent, .indented {
+    margin-left: 2%;
+}
+
+
+/*
+    Entities with indent in 5% increments.
+    
+    .p* and .block* have other settings in this css file.
+    
+    .indent* only sets indentation and adjusts nothing else.
+*/
+
+.p1, .block1, .indent1 {
+    margin-left: 5%;
+}
+
+.p2, .block2, .indent2 {
+    margin-left: 10%;
+}
+
+.p3, .block3, .indent3 {
+    margin-left: 15%;
+}
+
+.p4, .block4, .indent4 {
+    margin-left: 20%;
+}
+
+.p5, .block5, .indent5 {
+    margin-left: 25%;
+}
+
+
+/*
+    Entities with insets on both sides in 5% increments.
+*/
+
+.inset1 {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.inset2 {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.inset3 {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.inset4 {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.inset5 {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+
+/*
+    Entities with inset on both sides of 2%.
+*/
+
+.inset {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+
+
+/*
+    Settings for inline-block elements with width in percentages.
+*/
+
+.width1 {
+    width: 1%;
+    display: inline-block;
+}
+
+.width2 {
+    width: 2%;
+    display: inline-block;
+}
+
+.width3 {
+    width: 3%;
+    display: inline-block;
+}
+
+.width4 {
+    width: 4%;
+    display: inline-block;
+}
+
+.width5 {
+    width: 5%;
+    display: inline-block;
+}
+
+.width6 {
+    width: 6%;
+    display: inline-block;
+}
+
+.width7 {
+    width: 7%;
+    display: inline-block;
+}
+
+.width8 {
+    width: 8%;
+    display: inline-block;
+}
+
+.width9 {
+    width: 9%;
+    display: inline-block;
+}
+
+.width10 {
+    width: 10%;
+    display: inline-block;
+}
+
+.width11 {
+    width: 11%;
+    display: inline-block;
+}
+
+.width12 {
+    width: 12%;
+    display: inline-block;
+}
+
+.width13 {
+    width: 13%;
+    display: inline-block;
+}
+
+.width14 {
+    width: 14%;
+    display: inline-block;
+}
+
+.width15 {
+    width: 15%;
+    display: inline-block;
+}
+
+.width16 {
+    width: 16%;
+    display: inline-block;
+}
+
+.width17 {
+    width: 17%;
+    display: inline-block;
+}
+
+.width18 {
+    width: 18%;
+    display: inline-block;
+}
+
+.width19 {
+    width: 19%;
+    display: inline-block;
+}
+
+.width20 {
+    width: 20%;
+    display: inline-block;
+}
+
+.width25 {
+    width: 25%;
+    display: inline-block;
+}
+
+.width30 {
+    width: 30%;
+    display: inline-block;
+}
+
+.width35 {
+    width: 35%;
+    display: inline-block;
+}
+
+.width40 {
+    width: 40%;
+    display: inline-block;
+}
+
+.width45 {
+    width: 45%;
+    display: inline-block;
+}
+
+.width50 {
+    width: 50%;
+    display: inline-block;
+}
+
+.width55 {
+    width: 55%;
+    display: inline-block;
+}
+
+.width60 {
+    width: 60%;
+    display: inline-block;
+}
+
+.width65 {
+    width: 65%;
+    display: inline-block;
+}
+
+.width70 {
+    width: 70%;
+    display: inline-block;
+}
+
+.width75 {
+    width: 75%;
+    display: inline-block;
+}
+
+.width80 {
+    width: 80%;
+    display: inline-block;
+}
+
+.width85 {
+    width: 85%;
+    display: inline-block;
+}
+
+.width90 {
+    width: 90%;
+    display: inline-block;
+}
+
+.width95 {
+    width: 95%;
+    display: inline-block;
+}
+
+
+/*
+    Classes for bold and italic.
+    
+    b, strong, code, pre, .bold, .selected, .error are bold
+    
+    i, em, .italic are italic and bold
+    
+    .italicnormal is italic but not bold
+    
+    em, strong, .selected, .red, .error are red
+    
+    code, pre, .blue are blue
+*/
+
+b, strong, code, pre, .bold, .selected, i, em, .italic, .error {
+    font-weight: bold;
+}
+
+i, em, .italic, .italicnormal {
+    font-style: italic;
+}
+
+em, strong, .selected, .red, .error {
+    color: #f00;
+}
+
+code, pre, .blue {
+    color: #00f;
+}
+
+.green {
+    color: #007f00;
+}
+
+
+/*
+    Background color classes.
+*/
+
+.bg-yellow { background-color: Yellow; }
+
+.bg-orange { background-color: Orange; }
+
+.bg-lighter-orange { background-color: #FC0; }
+
+.bg-lime { background-color: Lime; }
+
+.bg-aqua { background-color: Aqua; }
+
+.bg-gray { background-color: Gray; }
+
+.bg-light-sky-blue { background-color: #87CEFA; }
+
+.bg-lighter-blue { background-color: #CEF; }
+
+.bg-light-gray { background-color: #D3D3D3; }
+
+.bg-burlywood { background-color: #DEB887; }
+
+
+/* Monospaced font-family setting. */
+
+code, pre, kbd, tt, .mono {
+    font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+}
+
+
+/*
+    Anchor, visited, hover settings.
+    
+    Anchor:         #08f, bold, no text decoration
+    
+    Anchor visited: #88f.
+    
+    Anchor hover:   #f00.
+    
+    Code within anchor follows the same convention
+    rather than being blue.
+*/
+
+a, a > code {
+    color: #08f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited, a:visited > code {
+    color: #88f;
+}
+
+a:hover, a > code:hover, a:visited:hover, a:visited > code:hover {
+    color: #f00;
+}
+
+
+/*
+    General classes to set vertical-align.
+    
+    Keep in mind that top and bottom are relative settings
+    and are trickier to use than the absolute settings
+    text-top and text-bottom.
+*/
+
+.baseline    { vertical-align: baseline; }
+
+.text-bottom { vertical-align: text-bottom; }
+
+.text-top    { vertical-align: text-top; }
+
+.middle      { vertical-align: middle; }
+
+.sub         { vertical-align: sub; }
+
+.super       { vertical-align: super; }
+
+.bottom      { vertical-align: bottom; }
+
+.top         { vertical-align:  top; }
+
+
+/*
+    General classes to set float and clear.
+*/
+
+.floatleft,       .floatL       { float: left; }
+
+.clearleft,       .clearL       { clear: left; }
+
+.clearfloatleft,  .clearfloatL  { clear: left; float: left; }
+
+.floatright,      .floatR       { float: right; }
+
+.clearright,      .clearR       { clear: right; }
+
+.clearfloatright, .clearfloatR  { clear: right; float: right; }
+
+.clearboth,       .clearB       { clear: both; }
+
+
+/*
+    General classes to set position.
+*/
+
+.relative { position: relative; }
+
+.absolute { position: absolute; }
+
+.fixed    { position: fixed; }
+
+
+/*
+    Convenient names for some common settings.
+    
+    .padded: 2px padding
+    
+    .border: 2px padding plus 2px solid black border
+
+    .spaced: 10px margin-bottom
+*/
+
+.padded { padding: 2px; }
+
+.border { padding: 2px; border: 2px solid black; }
+
+.spaced { margin-bottom: 10px; }
+
+
+/*
+    Table defaults
+    
+    table:
+        border-collapse: collapse;
+    
+    td:
+        border: 1;
+        padding: 2px 4px;
+*/
+
+table
+{
+    border-collapse: collapse;
+}
+
+td,th
+{
+    border: solid 1px black;
+    padding: 2px 4px;
+}
+
+
+/*
+    Page breaks for printing that may be
+    inserted as CSS classes.
+*/
+
+.pagebreakafter
+{
+    page-break-after: always;
+}
+
+.pagebreakbefore
+{
+    page-break-before: always;
+}
+
+
+/*
+    Make Internet Explorer use bicubic image interpolation
+    which is the default used by other browsers
+*/
+
+img { -ms-interpolation-mode: bicubic; }
+
+
+/*
+    To manually hide some area of the HTML.
+*/
+
+.hidden { display: none; }
+
+
+/*
+    Document specific classes.
+    
+    Adapted with changes from document.css
+*/
+
+.title, .titlebold, .subtitle, .subtitlebold {
+    text-align:center;
+}
+
+
+.title, .titlebold {
+    font-size:140%;
+}
+
+
+.subtitle, .subtitlebold {
+    font-size:110%;
+    font-style:italic;
+}
+
+
+.titlebold, .subtitlebold {
+    font-weight:bold;
+}
+
+
+.heading, .subheading {
+    text-align:justify;
+    margin-top:1em;
+}
+
+.heading {
+    font-size:120%;
+    font-weight:bold;
+}
+
+.subheading {
+    font-size:110%;
+    font-style:italic;
+}
+
+.highlight {
+    background-color:#FFFF77;
+}
+
+.small {
+    font-size:80%;
+    font-style:italic;
+    margin-top:2em;
+}

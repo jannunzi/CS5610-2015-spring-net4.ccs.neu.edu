@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: links.htm
+    ... Uses a story file to show an unordered list
+    ... of the titles in the story file.
+    ...
+    ... Furthermore each title is a link to its url.
+    
+    The file links.htm is an enhanced version of the file
+    whatisnext.htm.  The new features are described below.
+
+
+    In the simplest use of a story file for the story
+    utility, lines that begin with whitespace are
+    treated as comments and ignored.
+    
+    When using links.htm, information may be embedded
+    in these comments that influences the rendered page.
+    
+    Here are the current tags for embedded information:
+    
+        !title=...
+        !pagetitle=...
+        !comment=...
+        !heading=...
+        !br
+        !hr
+
+    The text that follows !title= will be used to replace
+    the content of the <title> block in the <head>.  This
+    will then be shown in the browser page tab.  Only one
+    !title= tag will be processed.
+    
+    By the way, the default title for the browser page tab
+    is: Links.
+    
+
+    There may be one or more instances of all other tags.
+    Furthermore, the text for a tag may contain snippets
+    of html if desired.
+
+
+    Each !pagetitle= tag will contribute a one line title
+    at the top of the web page.
+
+    The tag text line will be inserted into a <div> with
+    CSS class='title'.  This <div> will be appended to the
+    entity with id='pagetitle'.
+
+
+    The remaining tags will be used to insert information
+    or markup between the links/titles that form the main
+    content of the web page.
+
+    The tags !comment= and !heading= are similar.  Both
+    insert text in italic style.  A comment is flush left
+    whereas a heading is indented 3%.
+    
+    A comment has class='comment'.
+
+    A heading has class='heading'.
+
+
+    The tag !br has no associated text.  This tag will
+    cause a <br /> to be inserted.
+
+
+    The tag !hr has no associated text.  This tag will
+    cause a <hr /> to be inserted.
+
+
+    Copyright 2012,
+    Richard Rasala,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    rasala@ccs.neu.edu
+    
+    January 13, 2012
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+        content="initial-scale=1, minimum-scale=1">
+
+    <title>Links</title>
+
+    <link rel="Stylesheet" type="text/css" href="css/links.css" />
+    
+    <link rel="Stylesheet" type="text/css" href="css/screen.css"
+          media="screen" />
+    
+    <link rel="Stylesheet" type="text/css" href="css/print.css"
+          media="print" />
+    
+    <script type="text/javascript"
+        src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+    <script type="text/javascript" src="javascript/print.js"></script>
+    
+    <script type="text/javascript" src="javascript/queryparams.js"></script>
+    
+    <script type="text/javascript" src="javascript/storycore.js"></script>
+    
+    <script type="text/javascript" src="javascript/links.js"></script>
+</head>
+
+<body class="times">
+
+<div class="pad">
+
+<div id="pagetitle"></div>
+
+<div id="linkslist"></div>
+
+</div>
+
+</body>
+</html>

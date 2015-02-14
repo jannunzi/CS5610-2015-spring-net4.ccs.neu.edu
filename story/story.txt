@@ -1,0 +1,10 @@
+﻿storyfiles/introduction.htm     Story Utility Introduction
+whatisnext.htm?whatisnext.txt   What is Next?
+storyfiles/structure1.htm       Story File Structure 1
+story.txt                       The story file for this story
+storyfiles/structure2.htm       Story File Structure 2
+storyfiles/aboutshowfile.htm    Show File Utility
+storyfiles/aboutwhatisnext.htm  What Is Next Utility
+storyfiles/aboutlinks.htm       Links Utility
+index.htm?storysource/          Story Source Code
+index.htm?demo/                 A Demonstration Story

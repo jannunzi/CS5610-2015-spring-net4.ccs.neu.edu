@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: simpleproxytool.html
+    
+    Copyright 2014,
+    Richard Rasala,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    rasala@ccs.neu.edu
+-->
+
+<html lang="en">
+<head>
+
+<meta charset="utf-8" />
+<title></title>
+
+<meta name="viewport" content="initial-scale=1, minimum-scale=1">
+
+<link rel="Stylesheet" type="text/css" href="../css/style.css" />
+<link rel="Stylesheet" type="text/css" href="../css/style_screen.css" media="screen" />
+<link rel="Stylesheet" type="text/css" href="../css/enlarge.css" />
+
+<link rel="Stylesheet" type="text/css" href="simpleproxytool.css" />
+
+<script type="text/javascript"
+    src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+<script type="text/javascript" src="../javascript/print.js"></script>
+
+<script type="text/javascript" src="simpleproxytool.js"></script>
+
+</head>
+
+<body>
+
+<div class="pad enlarge">
+
+<p class="center bold enlarge">
+SimpleProxy Test Tool
+</p>
+
+<p class="bold">
+Instructions
+</p>
+
+<p>
+1. Enter the web URL to use with SimpleProxy
+<br />
+2. Click the button &ldquo;Create SimpleProxy URL&rdquo;
+<br />
+3. Click on the created URL to see the results in a new tab
+</p>
+
+<p class="bold">
+Enter web URL:
+<br />
+<input type="text" id="weburl" class="data large" />
+</p>
+
+<p>
+<input type="button" id="create" class="regular"
+    value="Create SimpleProxy URL" />
+</p>
+
+<p>
+<a href="#" target="_blank" id="proxyurl" class="data"></a>
+</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: storyfiles/structure2.htm
+    
+    Copyright 2012,
+    Richard Rasala,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    rasala@ccs.neu.edu
+    
+    January 25, 2012
+-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+        content="initial-scale=1, minimum-scale=1">
+
+    <title>Story File Structure 2</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../css/slide.css" />
+    
+    <link rel="Stylesheet" type="text/css" href="../css/screen.css"
+          media="screen" />
+    
+    <link rel="Stylesheet" type="text/css" href="../css/print.css"
+          media="print" />
+    
+</head>
+<body>
+
+<div class="pad">
+
+<h1 class="center">Story File Structure 2</h1>
+
+<p>
+On this page, we will give more information about the use
+of a <b>story file</b> to create a story.
+</p>
+
+<hr />
+
+<p>
+The <i>path-to-a-story-file</i> must point to a <b>story file</b>
+in the same web domain as the <b>Story Utility</b> html page.
+</p>
+
+<p>
+The reason for this restriction is that the <b>story file</b> is loaded
+using Javascript and the tool <code>XMLHttpRequest</code>.  Therefore
+standard browser security restrictions apply.
+</p>
+
+<hr />
+
+<p>
+We said that
+each line in the story file that <i>starts with a non-blank character</i>
+should consist of:
+</p>
+
+<ul>
+  <li>The <code>url</code> for a slide in the story</li>
+  <li>Whitespace</li>
+  <li>The text of a <b>title</b> to identify the slide
+  </li>
+</ul>
+
+<p>
+The <code>url</code> for an individual slide may be quite arbitrary
+because a slide is loaded into an HTML <code>iframe</code>.  There
+are no browser security restrictions in specifying the source for
+an <code>iframe</code>.
+</p>
+
+<hr />
+
+<p>
+For the <code>url</code>, you may use:
+</p>
+
+<ul>
+  <li>
+  A relative <code>url</code> where <i>relative</i> is interpreted
+  as relative to the web directory of the <b>story file</b>
+  </li>
+  <li>
+  A general <code>url</code> that opens with
+  <code>http://</code> or <code>https://</code>
+  </li>
+</ul>
+
+<hr />
+
+<p>
+In a few cases such as for the New York Times web site,
+the target page is designed so that it
+will not permit itself to be displayed in an <code>iframe</code>.
+For such a page, the <b>Story Utility</b> may not be used.
+</p>
+
+</div>
+
+</body>
+</html>

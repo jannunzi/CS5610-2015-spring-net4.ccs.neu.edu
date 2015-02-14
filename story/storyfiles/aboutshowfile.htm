@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: storyfiles/aboutshowfile.htm
+    
+    Copyright 2012,
+    Richard Rasala,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    rasala@ccs.neu.edu
+    
+    January 25, 2012
+-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+        content="initial-scale=1, minimum-scale=1">
+
+    <title>About Show File</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../css/slide.css" />
+    
+    <link rel="Stylesheet" type="text/css" href="../css/screen.css"
+          media="screen" />
+    
+    <link rel="Stylesheet" type="text/css" href="../css/print.css"
+          media="print" />
+    
+</head>
+
+<body>
+
+<div class="pad">
+
+<h1 class="center">The <i class="red">Show File</i> Utility</h1>
+
+<p>
+The <i class="red">Show File</i> utility is an important helper utility
+for the <b>Story Utility</b>.
+</p>
+
+<p>
+The <i class="red">Show File</i> utility will display
+<i>all or part of a text file</i>
+on a web page.  The utility will HTML-encode all
+characters that might interfere with proper display and
+will automatically enclose the resulting text in a
+<code>&lt;pre&gt;</code> tag pair.
+</p>
+
+<p>
+This utility is especially helpful for showing
+<i>data files and programming source code</i>.
+The fact that one may show selected
+lines in a file makes it possible to document and discuss
+portions of a large source code file.
+</p>
+
+<hr />
+
+<p>
+Call the <i class="red">Show File</i> utility via:
+</p>
+
+<pre class="indent1">.../story/showfile.htm?url=...&start=...&stop=...</pre>
+
+<p>
+The <code>url=</code> query parameter gives the relative url
+to the text file to be shown.
+</p>
+
+<p>
+Actually, <code>url=</code> is
+optional since the utility will assume that an
+<i>unnamed query parameter</i> is the <code>url</code>.
+</p>
+
+<p>
+The <i>optional</i> parameters <code>start=</code> and
+<code>stop=</code> give the lines in the file to start with
+and stop at.  We follow the conventions:
+</p>
+
+<ul>
+  <li>The first line in the file has index 1.</li>
+  <li>The parameter <code>start</code> is inclusive.</li>
+  <li>The parameter <code>stop</code> is exclusive.</li>
+</ul>
+
+<p>
+If one or both of these two parameters are omitted, the
+utility will provide the lines in the file that make sense.
+</p>
+
+</div>
+
+</body>
+</html>

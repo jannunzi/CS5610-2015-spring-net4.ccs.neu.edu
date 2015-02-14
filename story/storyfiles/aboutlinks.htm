@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+
+<!--
+    File: storyfiles/aboutlinks.htm
+    
+    Copyright 2012,
+    Richard Rasala,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    rasala@ccs.neu.edu
+    
+    January 25, 2012
+-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+        content="initial-scale=1, minimum-scale=1">
+    
+    <title>About Links</title>
+    
+    <link rel="Stylesheet" type="text/css" href="../css/slide.css" />
+    
+    <link rel="Stylesheet" type="text/css" href="../css/screen.css"
+          media="screen" />
+    
+    <link rel="Stylesheet" type="text/css" href="../css/print.css"
+          media="print" />
+    
+</head>
+
+<body>
+
+<div class="pad">
+
+<h1 class="center">The <i class="red">Links</i> Utility</h1>
+
+<p>
+The <i class="red">Links</i> utility is a convenient 
+helper utility for the <b>Story Utility</b>.
+</p>
+
+<p>
+The <i class="red">Links</i> utility is intended to be used
+either as the first slide in a <b>Story Utility</b> slide show
+or as an independent page that provides access to all links in
+a story file and can display additional titles, headings, and
+comments.
+</p>
+
+<p>
+In short, the <i class="red">Links</i> utility is fancy version
+of the <i class="red">What is Next</i> utility.
+</p>
+
+<hr />
+
+<p>
+The <i class="red">Links</i> utility will display the titles
+present in a story file and each title will be a link to its url.
+The url will open in a new tab.  In addition, the
+<i class="red">Links</i> utility can display additional titles,
+headings, and comments by placing the information needed in lines
+of the story file that begin with blank or tab.  These lines are
+ignored by the <b>Story Utility</b> and therefore can be used by
+the <i class="red">Links</i> utility to provide additional content.
+</p>
+
+<p>
+The additional content used by the <i class="red">Links</i> utility
+is placed on lines that begin with <i>at least one blank or tab</i>.
+Then the content is introduced by one of the following tags:
+</p>
+
+<ul>
+  <li><code>!title=...</code></li>
+  <li><code>!pagetitle=...</code></li>
+  <li><code>!comment=...</code></li>
+  <li><code>!heading=...</code></li>
+  <li><code>!br</code></li>
+  <li><code>!hr</code></li>
+</ul>
+
+<hr />
+
+<p>
+Let us explain how to use these tags.
+</p>
+
+<p>
+The tag <code>!title=...</code> is used to set the title that is shown
+in the browser tab for the page.  If this tag is omitted, then the
+browser tab will show the word &ldquo;Links&rdquo;.
+</p>
+
+<p>
+The tag <code>!title=...</code> may be used only once and may not
+include any HTML markup.  The other tags may be used multiple times and
+may contain valid snippets of HTML.
+</p>
+
+<p>
+The tag <code>!pagetitle=...</code> is used to add one or more titles to
+the top of the web page.  These page titles will be bold, centered, and
+in 140% font size.
+</p>
+
+<p>
+The auto-generated <i>titles/links</i> associated with the url&rsquo;s
+in the story file are displayed in bold with 125% font size.
+</p>
+
+<p>
+Any additional <i>comments and headings</i> will be displayed in italic
+with 125% font size.  Comments and headings must be entered on a single
+line in the story file but may render using multiple lines on the page.
+In that case, the rendered lines will be justified.
+</p>
+
+<p>
+The tag <code>!comment=...</code> is used to enter a comment.  A comment
+has no indentation, that is, it is flush left.
+</p>
+
+<p>
+The tag <code>!heading=...</code> is used to enter a heading.  A heading
+has left indentation of 3%.
+</p>
+
+<p>
+In other words, a comment and a heading are the same except for the issue
+of indentation.
+</p>
+
+<p>
+The tag <code>!br</code> tag is used to enter a vertical line break via
+the HTML code <code>&lt;br /&gt;</code>.
+</p>
+
+<p>
+The tag <code>!hr</code> tag is used to enter a horizontal rule via
+the HTML code <code>&lt;hr /&gt;</code>.
+</p>
+
+<p>
+The main content of a story file consists of url&rsquo;s together with
+titles for these url&rsquo;s.  By interweaving the comment, heading, br,
+and hr tags with this data, one can provide significantly more information
+and formatting than by supplying simply a list of titles/links.
+</p>
+
+<hr />
+
+<p>
+See the following
+<a href="../index.htm?minidemo/" target="_blank">Mini Demo</a>
+for an example of an introductory page created with the
+<i class="red">Links</i> utility.
+</p>
+
+<hr />
+
+<p>
+Call the <i class="red">Links</i> utility via:
+</p>
+
+<pre class="indent1">.../story/links.htm?url=...</pre>
+
+<p>
+The <code>url=</code> query parameter gives the relative url to
+the story text file to be processed.
+</p>
+
+<p>
+Actually, <code>url=</code> is optional since the utility will
+assume that an <i>unnamed query parameter</i> is the
+<code>url</code>.
+</p>
+
+</div>
+
+</body>
+</html>

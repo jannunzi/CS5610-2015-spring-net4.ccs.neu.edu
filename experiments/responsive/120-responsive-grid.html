@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Responsive Grid</title>
+    <style>
+        .container {
+            margin:auto;
+        }
+        .row {
+            clear: both;
+        }
+        .col-6 { }
+
+        @media screen and (min-width: 450px)
+        {
+            .col-6 {float: left;}
+        }
+        @media screen and (max-width: 450px)
+        {
+            .container {width: 300px}
+            .row {width: 300px;}
+            .col-6 {width: 300px;}
+        }
+        @media screen and (min-width: 450px) and (max-width: 550px) {
+            .container {width: 400px;}
+            .row {width: 400px;}
+            .col-6 {width: 200px;}
+        }
+        @media screen and (min-width: 550px) and (max-width: 650px) {
+            .container {width: 500px;}
+            .row {width: 500px;}
+            .col-6 {width: 250px;}
+        }
+        @media screen and (min-width: 650px) {
+            .container {width: 600px;}
+            .row {width: 600px;}
+            .col-6 {width: 300px;}
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            Lorem ipsum dolor sit amet,
+        </div>
+        <div class="col-6">
+            Lorem ipsum dolor sit amet,
+        </div>
+    </div>
+</div>
+</body>
+</html>

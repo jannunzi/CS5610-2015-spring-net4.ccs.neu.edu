@@ -1,0 +1,9 @@
+﻿Original file name: modernizr-latest.js
+Modernizer version: 2.6.2
+
+File renamed to: modernizr.min.js
+
+to be consistent with existing code
+even though the downloaded file is not minimized
+
+Date: 2103-09-01

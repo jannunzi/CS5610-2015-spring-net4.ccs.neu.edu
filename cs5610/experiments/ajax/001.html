@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>AJAX</title>
+    <style>
+        .plot {
+            background-color: yellow;
+        }
+    </style>
+    <script src="../../../js/jquery.js">
+    </script>
+    <script>
+        $(function ()
+        {
+            $("#getMovie").click(function () {
+                var title = $("#title").val();
+                $.ajax({
+                    url: "http://www.myapifilms.com/imdb?title="+title+"&format=JSONP&aka=0&business=0&seasons=0&seasonYear=0&technical=0&filter=N&exactFilter=0&limit=10&lang=en-us&actors=N&biography=0&trailer=0&uniqueName=0&filmography=0&bornDied=0&starSign=0&actorActress=0&actorTrivia=0&movieTrivia=0&awards=0&moviePhotos=N&movieVideos=N",
+                    dataType: "jsonp",
+                    success: renderMovies
+                });
+            })
+        });
+
+
+        function renderMovies(movies)
+        {
+            console.log(movies);
+            var parent = $("#movies");
+            var template = parent.find(".template");
+            console.log(template);
+            parent.empty();
+            for(var m in movies)
+            {
+                var movie = movies[m];
+                var title = movie.title;
+                var plot = movie.plot;
+                var urlPoster = movie.urlPoster;
+                var item = template.clone();
+                item.find(".title").html(title);
+                item.find(".plot").html(plot);
+                item.find(".poster").attr("src", urlPoster);
+                parent.append(item);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>AJAX</h1>
+    <a href="http://www.myapifilms.com/imdb?title=avatar&format=JSON&aka=0&business=0&seasons=0&seasonYear=0&technical=0&filter=N&exactFilter=0&limit=1&lang=en-us&actors=N&biography=0&trailer=0&uniqueName=0&filmography=0&bornDied=0&starSign=0&actorActress=0&actorTrivia=0&movieTrivia=0&awards=0&moviePhotos=N&movieVideos=N">Get Avatar</a>
+    <br />
+    <input id="title" placeholder="Title" />
+    <button id="getMovie">Get Movie</button>
+    <table>
+        <thead>
+
+        </thead>
+
+            <tbody id="movies">
+                <tr class="template">
+                    <td class="title">Skyfall</td>
+                    <td class="plot">
+                        When Bond's latest assignment goes gravely wrong and agents around the world are exposed, MI6 is attacked forcing M to relocate the agency. These events cause her authority and position to be challenged by Gareth Mallory (Ralph Fiennes), the new Chairman of the Intelligence and Security Committee. With MI6 now compromised from both inside and out, M is left with one ally she can trust: Bond. 007 takes to the shadows - aided only by field agent, Eve (Naomie Harris) - following a trail to the mysterious Silva (Javier Bardem), whose lethal and hidden motives have yet to reveal themselves
+                    </td>
+                    <td>
+                        <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BMjAyODkzNDgzMF5BMl5BanBnXkFtZTcwMDMxMDI4Nw@@._V1_SX214_AL_.jpg" />
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+</body>
+</html>

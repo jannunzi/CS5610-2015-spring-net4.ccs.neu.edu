@@ -1,0 +1,97 @@
+﻿/*
+    File: css/pptslide.css
+    
+    This is the CSS we use for certain slides
+    that emulate powerpoint slides.  The font
+    sizes are much larger than for normal web
+    pages.
+    
+    A user of the Story Utility might wish to
+    modify or replace this file to meet their
+    own goals.
+
+    Copyright 2010,
+    Richard Rasala,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    rasala@ccs.neu.edu
+    
+    September 16, 2010
+*/
+
+body {
+    background: white;
+}
+
+
+.times {
+    font-family: "Times New Roman", Serif;
+}
+
+
+.title, .subtitle, .subsubtitle {
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.title {
+    font-size: 300%;
+}
+
+.subtitle {
+    font-size: 270%;
+}
+
+.subsubtitle {
+    font-size: 240%;
+}
+
+
+p, li {
+    font-size: 240%;
+    text-align: justify;
+}
+
+li ul > li {
+    font-size: 85%;
+}
+
+li ul > li ul > li {
+    font-size: 85%;
+}
+
+li ul > li ul > li ul > li {
+    font-size: 85%;
+}
+
+
+.red, .error { color: #f00; }
+
+.green { color: #007f00; }
+
+code, pre, .blue { color: #00f; }
+
+
+code, pre, .mono {
+    font-family: "Consolas", "Lucida Console", "Courier New", "Andale Mono", monospace;
+}
+
+
+pre {
+    font-size: 200%;
+}
+
+a, a > code {
+    color: #08f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited, a:visited > code {
+    color: #88f;
+}
+
+a:hover, a > code:hover, a:visited:hover, a:visited > code:hover {
+    color: #f00;
+}

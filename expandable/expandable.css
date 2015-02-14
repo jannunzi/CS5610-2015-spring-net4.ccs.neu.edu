@@ -1,0 +1,52 @@
+﻿/*
+    File: expandable.css
+        
+    Copyright 2010,
+    Richard Rasala,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    rasala@ccs.neu.edu
+    
+    September 20, 2010
+*/
+
+/*
+    The background images are:
+    
+        expand.gif    ... plus  sign in a box
+        collapse.gif  ... minus sign in a box
+    
+    The width and height below equals
+    the width and height of each background image.
+    
+    The background images are assumed to be stored
+    in the same directory as this CSS file.
+    
+    If this is not the case then the URL's below
+    must be appropriately edited.
+*/
+
+
+/* Sets the background image to a plus icon. */
+.expandnode
+{
+    display:inline-block;
+    width: 18px;
+    height: 14px;
+    background-image: url('expand.gif');
+    background-repeat: no-repeat;
+}
+
+
+/* Sets the background image to a minus icon. */
+.collapsenode
+{
+    display:inline-block;
+    width: 18px;
+    height: 14px;
+    background-image: url('collapse.gif');
+    background-repeat: no-repeat;
+}
+
+.expandable, .expandbutton, .collapsebutton,
+.collapsesectionbutton {}

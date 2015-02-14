@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Hello World Angular Application</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/HelloWorldApp.js"></script>
+</head>
+<body ng-app="HelloWorldApp">
+    <div ng-controller="HelloWorldController">
+        <h1>Hello World Angular Application</h1>
+
+        <table>
+            <tr ng-repeat="e in employees">
+                <td>{{e.first}}</td>
+                <td>{{e.last}}</td>
+            </tr>
+        </table>
+
+        <input ng-model="employee.first" />
+
+        <p>
+            {{employee.first}}
+            {{employee.last}}
+        </p>
+        <input ng-model="hello"/>
+        <br/>
+        {{hello}}
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+    </div>
+    <div>
+        <h1>Other Content</h1>
+        {{goodbye}}
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+    </div>
+</body>
+</html>

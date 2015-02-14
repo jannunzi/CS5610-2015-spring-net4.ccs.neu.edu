@@ -1,0 +1,27 @@
+/*
+    File: print.css
+        
+    Copyright 2011,
+    Richard Rasala,
+    College of Computer and Information Science
+    Northeastern University, Boston, MA 02115
+    rasala@ccs.neu.edu
+    
+    May 23, 2011
+*/
+
+body {
+    font-size: 80%;
+}
+
+.hide_if_printing {
+    display: none;
+}
+
+.downloadbutton {
+    display: none;
+}
+
+pre, code {
+    color: Black;
+}
