@@ -1,0 +1,27 @@
+﻿<h1>Profile</h1>
+
+Hello {{currentUser.username}}
+
+<div ng-show="currentUser.role=='faculty'">
+    <h2>Courses Authored</h2>
+    <ul>
+        <li ng-repeat="course in authoring">
+            {{course.title}}
+            <span ng-click="removeCourse($index)">&times;</span>
+        </li>
+    </ul>
+    <h2>Courses Teaching</h2>
+    <ul>
+        <li ng-repeat="course in teaching">
+            {{course.title}}
+        </li>
+    </ul>
+</div>
+<div ng-show="currentUser.role=='student'">
+    <h2>Registered Courses</h2>
+    <ul>
+        <li ng-repeat="course in registered">
+            {{course.title}}
+        </li>
+    </ul>
+</div>

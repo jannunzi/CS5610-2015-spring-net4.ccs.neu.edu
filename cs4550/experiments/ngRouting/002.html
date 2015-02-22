@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Angular Routing</title>
+    <link href="../../../css/bootstrap.css" rel="stylesheet" />
+    <script src="../../../js/angular.min.js"></script>
+    <script src="../../../js/angular-route.js"></script>
+    <script src="002.js"></script>
+</head>
+<body ng-app="MyFilmsApiApp">
+    <div class="container">
+        <a href="#/home">Home</a> | 
+        <a href="#/profile">Profile</a> | 
+        <a href="#/details">Details</a>
+        <div ng-view>
+        </div>
+    </div>
+</body>
+</html>

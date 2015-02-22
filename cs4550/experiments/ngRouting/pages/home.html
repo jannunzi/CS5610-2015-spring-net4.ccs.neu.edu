@@ -1,0 +1,24 @@
+﻿<h1>Home</h1>
+
+<div class="input-group">
+    <input ng-model="searchTitle" type="text" class="form-control" placeholder="Search for...">
+    <span class="input-group-btn">
+        <button ng-click="search()"
+                class="btn btn-default"
+                type="button">Go!</button>
+    </span>
+</div>
+
+<table class="table table-striped">
+    <tbody>
+        <tr ng-repeat="movie in movies">
+            <td>{{movie.title}}</td>
+            <td>{{movie.plot}}</td>
+            <td>
+                <button class="btn btn-success" ng-click="addToFavorites(movie)">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

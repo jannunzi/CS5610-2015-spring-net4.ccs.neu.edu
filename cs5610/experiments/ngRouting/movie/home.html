@@ -1,0 +1,59 @@
+﻿<h1>Home</h1>
+
+{{favoriteMovies}}
+
+<h2>Search Movies</h2>
+<div class="input-group">
+    <input type="text" ng-model="searchTitle" class="form-control" placeholder="Search for...">
+    <span class="input-group-btn">
+        <button ng-click="searchMovies()" class="btn btn-default" type="button">Go!</button>
+    </span>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Rating</th>
+            <th>Plot</th>
+            <th>&nbsp;</th>
+        </tr>
+        <tr>
+            <th><input ng-model="movie.title" class="form-control" /></th>
+            <th><input ng-model="movie.year" class="form-control" /></th>
+            <th><input ng-model="movie.rating" class="form-control" /></th>
+            <th><input ng-model="movie.plot" class="form-control" /></th>
+            <th>
+                <button ng-click="updateMovie()" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-ok"></span>
+                </button>
+                <button ng-click="addMovie()" class="btn btn-success">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="movie in movies">
+            <td>{{movie.title}}</td>
+            <td>{{movie.year}}</td>
+            <td>{{movie.rating}}</td>
+            <td>
+                <img class="poster" ng-src="{{movie.urlPoster}}" width="50" />
+                {{movie.plot}}
+            </td>
+            <td>
+                <button ng-click="selectMovie(movie)" class="btn btn-warning">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                </button>
+                <button ng-click="removeMovie(movie)" class="btn btn-danger">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+                <button ng-click="addToFavorites(movie)" class="btn btn-info">
+                    <span class="glyphicon glyphicon-star"></span>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

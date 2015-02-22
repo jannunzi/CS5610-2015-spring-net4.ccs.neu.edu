@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Using Angular to Fetch Data from 3rd Party API</title>
+    <link href="../../../css/bootstrap.css" rel="stylesheet" />
+    <script src="/../../../js/angular.min.js"></script>
+    <script src="js/010.js"></script>
+</head>
+<body ng-app="MyFilmsApiApp">
+    <div class="container" ng-controller="MyFilmsApiController">
+        <h1>Using Angular to Fetch Data from 3rd Party API</h1>
+
+        <h2>Favorites</h2>
+        <table class="table table-striped">
+            <tbody>
+                <tr ng-repeat="movie in favorites">
+                    <td>{{movie.title}}</td>
+                    <td>
+                        <button class="btn btn-danger pull-right">
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="input-group">
+            <input ng-model="titleSearch" type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+                <button ng-click="searchTitle()" class="btn btn-default" type="button">Go!</button>
+            </span>
+        </div>
+
+        <table class="table table-striped">
+            <tbody>
+                <tr ng-repeat="movie in movies">
+                    <td>{{movie.title}}</td>
+                    <td>{{movie.plot}}</td>
+                    <td>
+                        <button ng-click="addToFavorites(movie)" class="btn btn-warning">
+                            <span class="glyphicon glyphicon-star"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        {{movies}}
+
+
+    </div>
+</body>
+</html>

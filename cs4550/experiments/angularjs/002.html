@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Simple Angular JS Hello World</title>
+    <link href="../../../css/bootstrap.css" rel="stylesheet" />
+    <script src="/../../../js/angular.min.js"></script>
+    <script src="js/002.js"></script>
+</head>
+<body ng-app="HelloApp">
+    <div class="container">
+        <h1>AngularJS</h1>
+
+        <div ng-controller="HelloController">
+            <h2>{{course.title}}</h2>
+            <p>{{course.description}}</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th><input class="form-control" ng-model="newCourse.title"/></th>
+                        <th><input class="form-control" ng-model="newCourse.description" /></th>
+                        <th><button ng-click="addCourse(newCourse)" class="btn btn-success pull-right">
+    <span class="glyphicon glyphicon-plus"></span>
+</button></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="curso in courses">
+                        <td>{{curso.title}}</td>
+                        <td>{{curso.description}}</td>
+                        <td>
+                            <button class="btn btn-warning">
+                                <span class="glyphicon glyphicon-star"></span>
+                            </button>
+                            <button ng-click="removeCourse(curso)" class="btn btn-danger pull-right">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

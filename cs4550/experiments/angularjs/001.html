@@ -4,24 +4,24 @@
     <title>Simple Angular JS Hello World</title>
     <link href="../../../css/bootstrap.css" rel="stylesheet" />
     <script src="/../../../js/angular.min.js"></script>
-    <script src="js/000.js"></script>
+    <script src="js/001.js"></script>
 </head>
 <body ng-app="HelloApp">
     <div class="container">
         <h1>AngularJS</h1>
 
-        {{outside}}
-
         <div ng-controller="HelloController">
-            {{hello}}
-            {{course}}
-            {{course.title}}
             <h2>{{course.title}}</h2>
             <p>{{course.description}}</p>
             <table class="table table-striped">
                 <tr ng-repeat="curso in courses">
                     <td>{{curso.title}}</td>
                     <td>{{curso.description}}</td>
+                    <td>
+                        <button ng-click="removeCourse(curso)" class="btn btn-danger pull-right">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </td>
                 </tr>
             </table>
         </div>
