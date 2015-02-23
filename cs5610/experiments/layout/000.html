@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Layout</title>
+    <link href="../../../css/bootstrap.css" rel="stylesheet" />
+    <link href="../../../css/bootstrap-theme.css" rel="stylesheet" />
+    <script src="../../../js/jquery-1.11.2.min.js"></script>
+    <script src="../../../js/angular.min.js"></script>
+    <script src="../../../js/angular-route.js"></script>
+    <script src="000.js"></script>
+    <style>
+        .highlight {
+            box-shadow : 0px 0px 5px black;
+        }
+        .my-cols {
+            min-height: 32px;
+        }
+    </style>
+</head>
+<body ng-app="LayoutApp">
+    <br/>
+    <div class="container" ng-controller="LayoutController">
+        <div class="row" ng-repeat="row in layout.rows">
+            <div class="col-xs-10">
+                <div class="row">
+                    <div ng-click="select(row)" ng-mouseover="hoverIn(col)" ng-mouseleave="hoverOut(col)" class="col-xs-{{col.span}} highlight my-cols" ng-repeat="col in row.cols">
+                        {{col.content}}
+                        <div ng-show="col.edit" class="pull-right" style="position: relative;right: -10px;">
+                            <span ng-click="moveColLeft($index)" class="glyphicon glyphicon-arrow-left"></span>
+                            <span ng-click="moveColRight($index)" class="glyphicon glyphicon-arrow-left"></span>
+                            <span class="glyphicon glyphicon-arrow-right"></span>
+                            <span ng-click="shrinkCol(col)" class="glyphicon glyphicon-minus"></span>
+                            <span ng-click="widenCol(col)" class="glyphicon glyphicon-plus"></span>
+                            <span ng-click="removeCol(row.cols, $index)" class="glyphicon glyphicon-remove"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-2">
+                <button class="btn btn-danger pull-right btn-xs" title="Move Row Up" ng-click="moveRowUp($index)">
+                    <span class="glyphicon glyphicon-arrow-up"></span>
+                </button>
+                <button class="btn btn-danger pull-right btn-xs" title="Move Row Down" ng-click="moveRowDown($index)">
+                    <span class="glyphicon glyphicon-arrow-down"></span>
+                </button>
+                <button class="btn btn-danger pull-right btn-xs" title="Remove Row" ng-click="removeRow($index)">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+                <button class="btn btn-success pull-right btn-xs" title="Add Column" ng-click="addColumn(row)">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+            </div>
+        </div>
+        <br/>
+        <button class="btn btn-success btn-block" ng-click="addRow()">
+            Add Row
+        </button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Layout</title>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/bootstrap-theme.css" rel="stylesheet" />
+    <script src="../js/jquery-1.11.2.min.js"></script>
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/angular-route.js"></script>
+    <script src="forms.js"></script>
+    <style>
+        .wam-margin-right-5px
+        {
+            margin-right: 5px;
+        }
+        .wam-margin-5px {
+            margin: 5px;
+        }
+        .highlight {
+            box-shadow : 0px 0px 5px black;
+        }
+        .my-cols {
+            min-height: 32px;
+        }
+    </style>
+</head>
+<body ng-app="FormsApp">
+    <br/>
+    <div class="container" ng-controller="FormsController">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">{{form.name}}</div>
+            <div class="panel-body">
+
+            </div>
+            <ul class="list-group">
+                <li
+                    ng-repeat="field in form.fields"
+                    class="list-group-item">
+                    <div class="row">
+                        <div class="col-xs-11">
+                            <div class="form-group">
+                                <label for="{{field.name}}">{{field.label}}</label>
+                                <input ng-model="field.value" ng-if="field.type=='email' || field.type=='text' || field.type=='number' || field.type=='date'" type="{{field.type}}" class=" form-control" id="{{field.name}}" placeholder="{{field.placeholder}}">
+                                <select ng-model="field.value" ng-if="field.type=='select'" class="form-control">
+                                    <option ng-repeat="option in field.options" value="option.value">{{option.label}}</option>
+                                </select>
+                                <ol ng-if="field.type=='radios'">
+                                    <li ng-repeat="option in field.options">
+                                        <label><input ng-model="field.value" type="radio" value="option.value" name="{{field.name}}" /> {{option.label}}</label>
+                                    </li>
+                                </ol>
+                                <ol ng-if="field.type=='checkboxes'">
+                                    <li ng-repeat="option in field.options">
+                                        <label><input ng-model="field.value" type="checkbox" ng-value="option.value" name="{{field.name}}" /> {{option.label}}</label>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="col-xs-1">
+                            <span class="pull-right glyphicon glyphicon-remove" ng-click="removeField($index)"></span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="text-center">
+                <button ng-click="buttonClick(button)" class="btn wam-margin-5px" type="{{button.type}}" ng-class="button.clas" ng-repeat="button in form.buttons">
+                    {{button.label}}
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
